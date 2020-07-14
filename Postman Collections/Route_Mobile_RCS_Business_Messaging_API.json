@@ -1,0 +1,534 @@
+{
+  "info": {
+    "_postman_id": "ad37351c-c069-4e24-abfc-584cb62b5d07",
+    "name": "Route Mobile RCS Business Messaging API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login API",
+      "_postman_id": "5437de2b-8df4-42f9-aa9b-88868b2ce6e8",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\":\"<USERNAME>\",\n  \"password\":\"<PASSWORD>\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/auth/v1/login/"
+      },
+      "response": []
+    },
+    {
+      "name": " Text Message",
+      "_postman_id": "808d97b1-655b-4160-a5e9-4fbed6478f9d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n\t\"text\": \"SAMPLE RCS TEST\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Media MP3",
+      "_postman_id": "5902d810-2dba-44cc-b207-49254d0e18ab",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": {
+          "raw": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message",
+          "protocol": "https",
+          "host": [
+            "apis",
+            "rmlconnect",
+            "net"
+          ],
+          "path": [
+            "staging",
+            "rcs",
+            "v1",
+            "<BOT_NAME>",
+            "message"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Media PDF",
+      "_postman_id": "93012777-4d97-4fd4-8cdc-09310d1887a2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+919326711257\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\"\n}\n ",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Media MP4",
+      "_postman_id": "5546bd8a-3533-49e9-b567-e2ca051f0481",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+919326711257\",\n    \"url\": \"https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Rich card Carousel",
+      "_postman_id": "6117c652-4f68-41e6-838b-7cbd87a31a46",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"+918928894215\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"N\u00e6r\u00f8yfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t],\n\t\"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Beautiful!\",\n            \"postback\":\"test\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Rich Card",
+      "_postman_id": "0046cac0-472e-44ae-8a35-758b350a70cb",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\":\"card\",\n  \"phone_no\":\"+918928894215\",\n  \"card\":{\n    \"title\":\"Your card\u2019s title\",\n    \"description\":\"Your card\u2019s description\",\n    \"url\":\"https://www.gstatic.com/webp/gallery/3.jpg\"\n   }\n   ,\n\t\"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Beautiful!\",\n            \"postback\":\"test\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Media Image",
+      "_postman_id": "93d0c52f-a410-44ad-b985-50cb61162088",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+919326711257\",\n    \"url\": \"https://www.gstatic.com/webp/gallery/3.jpg\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Media Audio",
+      "_postman_id": "93146c36-8929-4a46-9f40-2e5edcfb8597",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"url\": \"https://sample-videos.com/audio/mp3/crowd-cheering.mp3\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Geolocation (JIO)",
+      "_postman_id": "9b7d8643-3aec-4446-8d1b-f377732c74bc",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"+918928894215\",\n    \"latitude\": \"21.7645\",\n    \"longitude\": \"72.1519\",\n    \"label\": \"Bhavnagar\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "URL suggestion",
+      "_postman_id": "00951ec8-c050-43ab-b5f9-49e8d732e660",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+919326711257\",\n\t\"text\":\"Open this link\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"https://www.routemobile.com/\",\n\t\t\t\"postback\":\"Tap me\"\n\t\t}\n\t]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": {
+          "raw": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message",
+          "protocol": "https",
+          "host": [
+            "apis",
+            "rmlconnect",
+            "net"
+          ],
+          "path": [
+            "staging",
+            "rcs",
+            "v1",
+            "<BOT_NAME>",
+            "message"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Text suggestion",
+      "_postman_id": "1fb6f8d8-e799-40cb-ae34-07815c7b78b7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+917045345285\",\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Dial suggestion",
+      "_postman_id": "908c61a7-ab7d-4252-b68a-6121f048d7a5",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+919326711257\",\n\t\"text\":\"Hello from Route Mobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"+917045345285\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": {
+          "raw": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message",
+          "protocol": "https",
+          "host": [
+            "apis",
+            "rmlconnect",
+            "net"
+          ],
+          "path": [
+            "staging",
+            "rcs",
+            "v1",
+            "<BOT_NAME>",
+            "message"
+          ],
+          "query": [
+            {
+              "key": null,
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Location suggestion",
+      "_postman_id": "c0792fb7-0205-4e8e-807f-e672fc11e8c7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+919326711257\",\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"37.4220188\",\n\t\t\t\"longitude\":\"-122.0844786\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Fetch message status",
+      "_postman_id": "0e91eb0a-960c-4c54-8587-ab160f4db8f4",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>"
+          }
+        ],
+        "url": {
+          "raw": "https://apis.rmlconnect.net/staging/rcs/management/v1/status?id=<MESSAGE_ID>",
+          "protocol": "https",
+          "host": [
+            "apis",
+            "rmlconnect",
+            "net"
+          ],
+          "path": [
+            "staging",
+            "rcs",
+            "management",
+            "v1",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "<MESSAGE_ID>"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
