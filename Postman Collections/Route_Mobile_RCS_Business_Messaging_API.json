@@ -6,37 +6,6 @@
   },
   "item": [
     {
-      "name": "Media PDF",
-      "_postman_id": "93012777-4d97-4fd4-8cdc-09310d1887a2",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+919326711257\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\"\n}\n ",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Media MP4",
       "_postman_id": "5546bd8a-3533-49e9-b567-e2ca051f0481",
       "protocolProfileBehavior": {
