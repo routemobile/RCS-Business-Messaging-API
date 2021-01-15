@@ -6,37 +6,6 @@
   },
   "item": [
     {
-      "name": "Location suggestion",
-      "_postman_id": "c0792fb7-0205-4e8e-807f-e672fc11e8c7",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+919326711257\",\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"37.4220188\",\n\t\t\t\"longitude\":\"-122.0844786\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Fetch message status",
       "_postman_id": "0e91eb0a-960c-4c54-8587-ab160f4db8f4",
       "protocolProfileBehavior": {
