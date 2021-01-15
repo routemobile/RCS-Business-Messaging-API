@@ -167,7 +167,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t}\n}",
+          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t}\n}",
           "options": {
             "raw": {}
           }
