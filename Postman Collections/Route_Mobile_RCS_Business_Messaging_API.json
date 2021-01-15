@@ -6,37 +6,6 @@
   },
   "item": [
     {
-      "name": "Media Audio",
-      "_postman_id": "93146c36-8929-4a46-9f40-2e5edcfb8597",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"url\": \"https://sample-videos.com/audio/mp3/crowd-cheering.mp3\"\n}\n",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Geolocation (JIO)",
       "_postman_id": "9b7d8643-3aec-4446-8d1b-f377732c74bc",
       "protocolProfileBehavior": {
