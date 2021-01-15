@@ -6,45 +6,6 @@
   },
   "item": [
     {
-      "name": "Fetch message status",
-      "_postman_id": "0e91eb0a-960c-4c54-8587-ab160f4db8f4",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>"
-          }
-        ],
-        "url": {
-          "raw": "https://apis.rmlconnect.net/staging/rcs/management/v1/status?id=<MESSAGE_ID>",
-          "protocol": "https",
-          "host": [
-            "apis",
-            "rmlconnect",
-            "net"
-          ],
-          "path": [
-            "staging",
-            "rcs",
-            "management",
-            "v1",
-            "status"
-          ],
-          "query": [
-            {
-              "key": "id",
-              "value": "<MESSAGE_ID>"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "Media PDF",
       "_postman_id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
       "protocolProfileBehavior": {
@@ -70,6 +31,32 @@
           }
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Login API",
+      "_postman_id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\":\"Username\",\n  \"password\":\"password\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/auth/v1/login/",
+        "description": "You need to create an auth token using this API"
       },
       "response": []
     },
@@ -461,32 +448,6 @@
           }
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
-      },
-      "response": []
-    },
-    {
-      "name": "Login API",
-      "_postman_id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"username\":\"demo\",\n  \"password\":\"9aKy#&MD\"\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/auth/v1/login/",
-        "description": "You need to create an auth token using this API"
       },
       "response": []
     }
