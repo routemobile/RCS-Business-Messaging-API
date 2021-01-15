@@ -283,7 +283,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"21.7645\",\n    \"longitude\": \"72.1519\",\n    \"label\": \"Bhavnagar\"\n}\n",
+          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"21.7645\",\n    \"longitude\": \"72.1519\",\n    \"label\": \"Bhavnagar\"\n}\n",
           "options": {
             "raw": {}
           }
@@ -312,7 +312,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+918928894215\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}",
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}",
           "options": {
             "raw": {}
           }
@@ -341,7 +341,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n      \"bot_name\":\"Routemobile\",\n\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}",
+          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}",
           "options": {
             "raw": {}
           }
