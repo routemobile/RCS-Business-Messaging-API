@@ -6,60 +6,6 @@
   },
   "item": [
     {
-      "name": "Login API",
-      "_postman_id": "5437de2b-8df4-42f9-aa9b-88868b2ce6e8",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"username\":\"<USERNAME>\",\n  \"password\":\"<PASSWORD>\"\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/auth/v1/login/"
-      },
-      "response": []
-    },
-    {
-      "name": " Text Message",
-      "_postman_id": "808d97b1-655b-4160-a5e9-4fbed6478f9d",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n\t\"text\": \"SAMPLE RCS TEST\"\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Media MP3",
       "_postman_id": "5902d810-2dba-44cc-b207-49254d0e18ab",
       "protocolProfileBehavior": {
