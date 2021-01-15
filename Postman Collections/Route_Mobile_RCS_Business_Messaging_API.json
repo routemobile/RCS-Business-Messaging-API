@@ -104,7 +104,7 @@
           },
           {
             "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5ODUyMjk5OCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTg1MTkzOTgsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.lpdREgaAvrQhugEfSD9XXihl_7TS7cu8XquK0asnPfs"
+            "value": ""
           }
         ],
         "body": {
@@ -133,7 +133,7 @@
           },
           {
             "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgyMjMwNSwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MTg3MDUsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.YaLWWLMFiDbw0VcS7-fWz515Dc4URE5CdaPdvDUANP8"
+            "value": ""
           }
         ],
         "body": {
