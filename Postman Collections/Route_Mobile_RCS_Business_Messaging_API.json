@@ -249,7 +249,7 @@
           },
           {
             "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MTM0NzQ4OCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTEzNDM4ODgsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.5i576BI-fgPmfH94ema1HueXN-nrXcp1WNaWhCaBOBc"
+            "value": ""
           }
         ],
         "body": {
