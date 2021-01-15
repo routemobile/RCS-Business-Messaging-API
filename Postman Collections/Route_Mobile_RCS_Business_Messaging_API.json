@@ -37,6 +37,45 @@
       "response": []
     },
     {
+      "name": "Fetch message status",
+      "_postman_id": "c168d0ec-1a23-47a9-bac8-77b848b959c2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "<API_TOKEN>"
+          }
+        ],
+        "url": {
+          "raw": "https://apis.rmlconnect.net/staging/rcs/management/v1/status?id=<MESSAGE_ID>",
+          "protocol": "https",
+          "host": [
+            "apis",
+            "rmlconnect",
+            "net"
+          ],
+          "path": [
+            "staging",
+            "rcs",
+            "management",
+            "v1",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "<MESSAGE_ID>"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Geolocation (JIO)",
       "_postman_id": "9b7d8643-3aec-4446-8d1b-f377732c74bc",
       "protocolProfileBehavior": {
@@ -238,45 +277,6 @@
     {
       "name": "Fetch message status",
       "_postman_id": "0e91eb0a-960c-4c54-8587-ab160f4db8f4",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>"
-          }
-        ],
-        "url": {
-          "raw": "https://apis.rmlconnect.net/staging/rcs/management/v1/status?id=<MESSAGE_ID>",
-          "protocol": "https",
-          "host": [
-            "apis",
-            "rmlconnect",
-            "net"
-          ],
-          "path": [
-            "staging",
-            "rcs",
-            "management",
-            "v1",
-            "status"
-          ],
-          "query": [
-            {
-              "key": "id",
-              "value": "<MESSAGE_ID>"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Fetch message status",
-      "_postman_id": "c168d0ec-1a23-47a9-bac8-77b848b959c2",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
