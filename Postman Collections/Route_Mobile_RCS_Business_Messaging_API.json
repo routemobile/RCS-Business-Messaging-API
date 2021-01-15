@@ -6,37 +6,6 @@
   },
   "item": [
     {
-      "name": "Rich card Carousel",
-      "_postman_id": "6117c652-4f68-41e6-838b-7cbd87a31a46",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"+918928894215\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"N\u00e6r\u00f8yfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t],\n\t\"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Beautiful!\",\n            \"postback\":\"test\"\n        }\n    ]\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Rich Card",
       "_postman_id": "0046cac0-472e-44ae-8a35-758b350a70cb",
       "protocolProfileBehavior": {
