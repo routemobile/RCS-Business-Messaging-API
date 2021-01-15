@@ -370,7 +370,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+918928894215\",\n\t\"text\":\"Hello from Route Mobile\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"+917045345285\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Hello from Route Mobile\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"+917045345285\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
           "options": {
             "raw": {}
           }
