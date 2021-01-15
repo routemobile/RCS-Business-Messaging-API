@@ -45,6 +45,35 @@
       "response": []
     },
     {
+      "name": "URL suggestion",
+      "_postman_id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDUyNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY5MjYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.aq7Pa5W9WEdGa6eU3JU7eg-6npJ9Kyqha7mlEUeIoWo"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+918928894215\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "Text suggestion",
       "_postman_id": "e4fc6cb5-2358-41f5-ac68-69b35ce413a4",
       "protocolProfileBehavior": {
@@ -166,35 +195,6 @@
         "body": {
           "mode": "raw",
           "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":37.4220188,\n\t\t\t\"longitude\":-122.0844786,\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
-      },
-      "response": []
-    },
-    {
-      "name": "URL suggestion",
-      "_postman_id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDUyNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY5MjYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.aq7Pa5W9WEdGa6eU3JU7eg-6npJ9Kyqha7mlEUeIoWo"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+918928894215\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}",
           "options": {
             "raw": {}
           }
