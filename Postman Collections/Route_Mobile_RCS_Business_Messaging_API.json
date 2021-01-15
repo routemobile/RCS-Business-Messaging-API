@@ -74,6 +74,35 @@
       "response": []
     },
     {
+      "name": "Text",
+      "_postman_id": "1d20eb80-6b1d-4c96-91c1-dadd527f001c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDAwMywiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY0MDMsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.c8vvQmlK_JbBbS1anwoEhlwtSed9jhKGH9qt14Hg7c0"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"+918928894215\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"Hello, testing\"\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "Media",
       "_postman_id": "91d28a30-b433-43e6-8c92-f9212e53a0c9",
       "protocolProfileBehavior": {
@@ -436,8 +465,8 @@
       "response": []
     },
     {
-      "name": "Text",
-      "_postman_id": "1d20eb80-6b1d-4c96-91c1-dadd527f001c",
+      "name": "Login API",
+      "_postman_id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -447,20 +476,17 @@
           {
             "key": "Content-Type",
             "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDAwMywiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY0MDMsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.c8vvQmlK_JbBbS1anwoEhlwtSed9jhKGH9qt14Hg7c0"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"+918928894215\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"Hello, testing\"\n}",
+          "raw": "{\n  \"username\":\"demo\",\n  \"password\":\"9aKy#&MD\"\n}",
           "options": {
             "raw": {}
           }
         },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+        "url": "https://apis.rmlconnect.net/auth/v1/login/",
+        "description": "You need to create an auth token using this API"
       },
       "response": []
     }
