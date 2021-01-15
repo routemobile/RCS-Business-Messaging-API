@@ -138,7 +138,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"http://techslides.com/demos/sample-videos/small.mp4\",\n    \"phone_no\": \"+918928894215\"\n\n}\n",
+          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"http://techslides.com/demos/sample-videos/small.mp4\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n",
           "options": {
             "raw": {}
           }
