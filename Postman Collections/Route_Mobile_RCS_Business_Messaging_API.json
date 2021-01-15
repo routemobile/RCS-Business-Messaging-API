@@ -45,6 +45,64 @@
       "response": []
     },
     {
+      "name": "Rich card Carousel",
+      "_postman_id": "130cc5b1-b12c-4797-83cf-a4917c6bb95a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5NTI1MDE0MSwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTUyNDY1NDEsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.L9Wc5V011jmS8yimkWWVLZuINXbrCp3W08Ky45U-BgY"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"N\u00e6r\u00f8yfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Media Image",
+      "_postman_id": "308b2f59-ad9a-420d-a76c-92f74acd4cdd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5Nzk4Njc4MywiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTc5ODMxODMsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.HSwj9r6AwIE6Q1jDhcmMu-8TUjz3CEKRIf0ecsYm9Lo"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "Media Audio",
       "_postman_id": "a132289f-5f52-4c72-bdc3-44273f640257",
       "protocolProfileBehavior": {
@@ -253,6 +311,35 @@
         "body": {
           "mode": "raw",
           "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":37.4220188,\n\t\t\t\"longitude\":-122.0844786,\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
+      "name": "Rich Card",
+      "_postman_id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgwNDQwMCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MDA4MDAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.18R8ifCgb4V1jgJ4S8t_2tDf9m1W6pH5Ga_h5ZVaq1E"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t}\n}",
           "options": {
             "raw": {}
           }
