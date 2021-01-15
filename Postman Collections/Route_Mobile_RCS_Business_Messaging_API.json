@@ -6,37 +6,6 @@
   },
   "item": [
     {
-      "name": "Media Image",
-      "_postman_id": "93d0c52f-a410-44ad-b985-50cb61162088",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+919326711257\",\n    \"url\": \"https://www.gstatic.com/webp/gallery/3.jpg\"\n}\n",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Media Audio",
       "_postman_id": "93146c36-8929-4a46-9f40-2e5edcfb8597",
       "protocolProfileBehavior": {
