@@ -43,6 +43,49 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Capability checking API",
+      "_postman_id": "0b4890eb-65eb-42b2-8d28-3a33bdd66a10",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDUyNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY5MjYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.aq7Pa5W9WEdGa6eU3JU7eg-6npJ9Kyqha7mlEUeIoWo",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://apis.rmlconnect.net/rcs/bot/v1/contactCapabilities?userContact=%2B918928894215&botName=Routemobile",
+          "protocol": "https",
+          "host": [
+            "apis",
+            "rmlconnect",
+            "net"
+          ],
+          "path": [
+            "rcs",
+            "bot",
+            "v1",
+            "contactCapabilities"
+          ],
+          "query": [
+            {
+              "key": "userContact",
+              "value": "%2B918928894215"
+            },
+            {
+              "key": "botName",
+              "value": "Routemobile"
+            }
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
