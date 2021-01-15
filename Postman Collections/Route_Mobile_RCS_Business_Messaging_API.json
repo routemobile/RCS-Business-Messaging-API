@@ -45,6 +45,35 @@
       "response": []
     },
     {
+      "name": "Rich Card",
+      "_postman_id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgwNDQwMCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MDA4MDAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.18R8ifCgb4V1jgJ4S8t_2tDf9m1W6pH5Ga_h5ZVaq1E"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t}\n}",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "Rich card Carousel",
       "_postman_id": "130cc5b1-b12c-4797-83cf-a4917c6bb95a",
       "protocolProfileBehavior": {
@@ -311,35 +340,6 @@
         "body": {
           "mode": "raw",
           "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":37.4220188,\n\t\t\t\"longitude\":-122.0844786,\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
-      },
-      "response": []
-    },
-    {
-      "name": "Rich Card",
-      "_postman_id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgwNDQwMCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MDA4MDAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.18R8ifCgb4V1jgJ4S8t_2tDf9m1W6pH5Ga_h5ZVaq1E"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t}\n}",
           "options": {
             "raw": {}
           }
