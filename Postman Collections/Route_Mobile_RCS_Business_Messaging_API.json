@@ -231,6 +231,35 @@
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
+    },
+    {
+      "name": "Media Audio",
+      "_postman_id": "a132289f-5f52-4c72-bdc3-44273f640257",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MTM0NzQ4OCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTEzNDM4ODgsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.5i576BI-fgPmfH94ema1HueXN-nrXcp1WNaWhCaBOBc"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
     }
   ]
 }
