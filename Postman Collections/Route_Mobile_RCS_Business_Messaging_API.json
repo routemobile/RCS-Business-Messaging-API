@@ -45,6 +45,35 @@
       "response": []
     },
     {
+      "name": "Media MP4",
+      "_postman_id": "0cd5fc86-657a-4ee1-a458-afe2de9440f7",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgyMjMwNSwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MTg3MDUsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.YaLWWLMFiDbw0VcS7-fWz515Dc4URE5CdaPdvDUANP8"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"http://techslides.com/demos/sample-videos/small.mp4\",\n    \"phone_no\": \"+918928894215\"\n\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "Rich Card",
       "_postman_id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
       "protocolProfileBehavior": {
