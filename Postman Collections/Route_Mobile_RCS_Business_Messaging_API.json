@@ -225,7 +225,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n}\n",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n}\n",
           "options": {
             "raw": {}
           }
