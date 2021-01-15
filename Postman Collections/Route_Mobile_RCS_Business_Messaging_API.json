@@ -6,59 +6,6 @@
   },
   "item": [
     {
-      "name": "Dial suggestion",
-      "_postman_id": "908c61a7-ab7d-4252-b68a-6121f048d7a5",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>",
-            "type": "text"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+919326711257\",\n\t\"text\":\"Hello from Route Mobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"+917045345285\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": {
-          "raw": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message",
-          "protocol": "https",
-          "host": [
-            "apis",
-            "rmlconnect",
-            "net"
-          ],
-          "path": [
-            "staging",
-            "rcs",
-            "v1",
-            "<BOT_NAME>",
-            "message"
-          ],
-          "query": [
-            {
-              "key": null,
-              "value": "",
-              "disabled": true
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "Location suggestion",
       "_postman_id": "c0792fb7-0205-4e8e-807f-e672fc11e8c7",
       "protocolProfileBehavior": {
