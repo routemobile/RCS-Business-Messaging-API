@@ -6,31 +6,6 @@
   },
   "item": [
     {
-      "name": "Media MP4",
-      "_postman_id": "5546bd8a-3533-49e9-b567-e2ca051f0481",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "<API_TOKEN>"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+919326711257\",\n    \"url\": \"https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4\"\n}\n",
-          "options": {
-            "raw": {}
-          }
-        },
-        "url": "https://apis.rmlconnect.net/staging/rcs/v1/<BOT_NAME>/message"
-      },
-      "response": []
-    },
-    {
       "name": "Rich card Carousel",
       "_postman_id": "6117c652-4f68-41e6-838b-7cbd87a31a46",
       "protocolProfileBehavior": {
