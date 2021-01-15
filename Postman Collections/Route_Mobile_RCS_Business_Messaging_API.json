@@ -45,6 +45,35 @@
       "response": []
     },
     {
+      "name": "Media PDF",
+      "_postman_id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgwNDc0MCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MDExNDAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.x0q19QqHAlZfwttL_a7J_B7wVQ3npBsYHaE7Cxudy_8"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\"\n}\n ",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "Media MP4",
       "_postman_id": "0cd5fc86-657a-4ee1-a458-afe2de9440f7",
       "protocolProfileBehavior": {
@@ -378,8 +407,8 @@
       "response": []
     },
     {
-      "name": "Media PDF",
-      "_postman_id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
+      "name": "Media",
+      "_postman_id": "91d28a30-b433-43e6-8c92-f9212e53a0c9",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -392,12 +421,12 @@
           },
           {
             "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MjgwNDc0MCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTI4MDExNDAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.x0q19QqHAlZfwttL_a7J_B7wVQ3npBsYHaE7Cxudy_8"
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5ODUyMjk5OCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTg1MTkzOTgsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.lpdREgaAvrQhugEfSD9XXihl_7TS7cu8XquK0asnPfs"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\"\n}\n ",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n",
           "options": {
             "raw": {}
           }
