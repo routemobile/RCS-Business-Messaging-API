@@ -25,7 +25,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\"\n}\n ",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\"\n}\n ",
           "options": {
             "raw": {}
           }
@@ -75,12 +75,12 @@
           },
           {
             "key": "Authorization",
-            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDAwMywiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY0MDMsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.c8vvQmlK_JbBbS1anwoEhlwtSed9jhKGH9qt14Hg7c0"
+            "value": ""
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"+918928894215\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"Hello, testing\"\n}",
+          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"{mobile number}\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"Hello, testing\"\n}",
           "options": {
             "raw": {}
           }
@@ -109,7 +109,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n",
           "options": {
             "raw": {}
           }
