@@ -45,6 +45,35 @@
       "response": []
     },
     {
+      "name": "Geolocation (JIO)",
+      "_postman_id": "ea2daa03-94d8-4a46-a7af-a97109463c36",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU5MTM1NTcyMiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1OTEzNTIxMjIsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.OopO-B9cgMAJhgf0zfFeQjEx-X3V94re3AT3irAu6vI"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"21.7645\",\n    \"longitude\": \"72.1519\",\n    \"label\": \"Bhavnagar\"\n}\n",
+          "options": {
+            "raw": {}
+          }
+        },
+        "url": "https://apis.rmlconnect.net/rcs/v1/message"
+      },
+      "response": []
+    },
+    {
       "name": "URL suggestion",
       "_postman_id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
       "protocolProfileBehavior": {
