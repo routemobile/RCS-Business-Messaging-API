@@ -80,7 +80,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"{mobile number}\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"Hello, testing\"\n}",
+          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"{mobile number}\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"{sample text}\"\n}",
           "options": {
             "raw": {}
           }
@@ -109,7 +109,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n",
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n",
           "options": {
             "raw": {}
           }
@@ -138,7 +138,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"http://techslides.com/demos/sample-videos/small.mp4\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n",
+          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample video mp4 url https://}\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n",
           "options": {
             "raw": {}
           }
@@ -167,7 +167,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t}\n}",
+          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"{sample image url https://}\"\n\t}\n}",
           "options": {
             "raw": {}
           }
@@ -196,7 +196,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"Nærøyfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t]\n}",
+          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"Nærøyfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"{sample image url https://}\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t]\n}",
           "options": {
             "raw": {}
           }
