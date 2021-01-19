@@ -370,7 +370,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Hello from Route Mobile\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"{contact number}\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"{sample text}\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"{contact number}\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
           "options": {
             "raw": {}
           }
@@ -442,7 +442,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":37.4220188,\n\t\t\t\"longitude\":-122.0844786,\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
+          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"{example: 18.991341}\",\n\t\t\t\"longitude\":\"{example: 72.838249}\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
           "options": {
             "raw": {}
           }
