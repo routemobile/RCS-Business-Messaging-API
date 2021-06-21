@@ -113,6 +113,32 @@
           "response": []
         },
         {
+          "name": "Media Image",
+          "id": "308b2f59-ad9a-420d-a76c-92f74acd4cdd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"{sample image url https://}\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
           "name": "Rich card Carousel",
           "id": "130cc5b1-b12c-4797-83cf-a4917c6bb95a",
           "protocolProfileBehavior": {
@@ -159,32 +185,6 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample video mp4 url https://}\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n"
-            },
-            "url": "https://apis.rmlconnect.net/rcs/v1/message"
-          },
-          "response": []
-        },
-        {
-          "name": "Media Image",
-          "id": "308b2f59-ad9a-420d-a76c-92f74acd4cdd",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"{sample image url https://}\"\n}\n"
             },
             "url": "https://apis.rmlconnect.net/rcs/v1/message"
           },
