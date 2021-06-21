@@ -87,6 +87,32 @@
           "response": []
         },
         {
+          "name": "Rich Card",
+          "id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"{sample title}\",\n\t\t\"description\": \"{sample description}\",\n\t\t\"url\": \"{sample image url https://}\"\n\t}\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
           "name": "Media MP4",
           "id": "0cd5fc86-657a-4ee1-a458-afe2de9440f7",
           "protocolProfileBehavior": {
@@ -140,32 +166,6 @@
         },
         "url": "https://apis.rmlconnect.net/auth/v1/login/",
         "description": "You need to create an auth token using this API"
-      },
-      "response": []
-    },
-    {
-      "name": "Rich Card",
-      "id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"{sample title}\",\n\t\t\"description\": \"{sample description}\",\n\t\t\"url\": \"{sample image url https://}\"\n\t}\n}"
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
     },
