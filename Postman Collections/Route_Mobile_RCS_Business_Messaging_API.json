@@ -7,39 +7,40 @@
   "item": [
     {
       "name": "Notification API",
-      "item": [],
+      "item": [
+        {
+          "name": "Media PDF",
+          "id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample pdf url https://}\"\n}\n "
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        }
+      ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
     },
     {
       "name": "Session API",
       "item": [],
       "id": "142e373b-7ceb-4ed9-ad86-adca3076598e"
-    },
-    {
-      "name": "Media PDF",
-      "id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample pdf url https://}\"\n}\n "
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
-      },
-      "response": []
     },
     {
       "name": "Login API",
