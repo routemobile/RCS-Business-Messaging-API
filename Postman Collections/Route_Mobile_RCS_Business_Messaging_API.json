@@ -7,7 +7,13 @@
   "item": [
     {
       "name": "New API",
-      "item": [],
+      "item": [
+        {
+          "name": "New Folder",
+          "item": [],
+          "id": "a44a767f-f691-49b6-9868-1a6d979742e7"
+        }
+      ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
     },
     {
