@@ -832,6 +832,376 @@
       "id": "f7f485f1-0ee4-402d-badb-134255e04450"
     },
     {
+      "name": "Bulk Upload Campaign Copy",
+      "item": [
+        {
+          "name": "Text message",
+          "id": "3caa9004-71c2-4d02-83d2-33505f3912c2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\": \"text\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"text\": \"testing\",\n    \"bot_name\":\"Routemobile\"\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media MP4",
+          "id": "75c693c1-af7e-4a62-b411-3ebcc4d436a1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxNTYzODU2MiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTU2MzQ5NjIsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.01HKF0MAWNaJn8jjRnMKiiU-cKBF9LXTObZ651ovrT4"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"url\": \"https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n\t\"campaign_name\": \"First Campaign\",\n    \"bot_name\":\"Routemobile\"\n\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Text message (With fallback SMS)",
+          "id": "2fa72d7c-beed-4f32-a6ed-7633b0c377ba",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\": \"text\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n    \"fallback_text\":\"test\",\n\t\"text\": \"testing\",\n    \"bot_name\":\"Routevoice\"\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "URL suggestion",
+          "id": "3cf42d91-c258-4618-ae69-c42c91a5fdfd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\":\"text\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n    \"campaign_name\": \"First Campaign\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"https://www.routemobile.com/\",\n\t\t\t\"postback\":\"Tap me\"\n\t\t}\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Text message (Scheduled)",
+          "id": "df381a3c-5a9f-41fa-a151-29a435d14351",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTU4ODY3MjAwMSwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE1ODg2Njg0MDEsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0._PXOkuE2vkm4ayfr690WhEEwGJTTpWHVKHU6lbDV7Hs"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\": \"text\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n\t\"text\": \"This is a test by RCS team\",\n\t\"campaign_name\": \"Scheduled Campaign\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n    \"bot_name\":\"Routemobile\"\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Rich card Carousel",
+          "id": "4c12f706-df56-47b2-b6fc-9b5762b29d50",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxNTYzOTI3MCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTU2MzU2NzAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.euRCKF0U9BysqHrYKEhUMqeY414jXIJbntUZKFqY2-U"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"multiple_cards\",\n    \"bot_name\":\"Routemobile\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n    \"campaign_name\": \"First Campaign\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"Nærøyfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t],\n\t\"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Beautiful!\",\n            \"postback\":\"test\"\n        }\n    ]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media PDF",
+          "id": "72d3edd9-79be-4b01-8eec-24306bbf3741",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxNTYzOTEyNywiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTU2MzU1MjcsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.jFYi5J7H6AFcexs1CGLXQl5aNlA-auEfBEtXo0sOR4I"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"url\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n\t\"campaign_name\": \"First Campaign\",\n    \"bot_name\":\"Routemobile\"\n}\n "
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Text suggestion",
+          "id": "e58e4497-68bf-4257-bb0c-8d4572259662",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"text\",\n    \"text\": \"Handy suggestions\",\n    \"bot_name\":\"Routemobile\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n    \"campaign_name\": \"First Campaign\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Dial suggestion",
+          "id": "1a89fa2b-d8b9-4a85-b315-495f419798fc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\":\"text\",\n    \"bot_name\":\"Routemobile\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",   \n    \"campaign_name\": \"First Campaign\",\n\t\"text\":\"Hello from Route Mobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"+917045345285\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Location suggestion",
+          "id": "e3ca026a-1a6a-4e94-be7f-b57c0a9e70ac",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"text\",\n    \"text\": \"Handy suggestions\",\n    \"bot_name\":\"Routemobile\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",    \n    \"campaign_name\": \"First Campaign\",\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"37.4220188\",\n\t\t\t\"longitude\":\"-122.0844786\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Rich Card",
+          "id": "b1e942b0-964c-4182-a259-deeaf4de71b8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxNDA4MTQ3MCwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTQwNzc4NzAsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.7am6ZCnYWBpusR4eEGXDDlIOYnDUDLPAy67dRNZ3cX8"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\": \"card\",\n\t\"bot_name\": \"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Your card’s title\",\n\t\t\"description\": \"Your card’s description\",\n\t\t\"url\": \"https://www.gstatic.com/webp/gallery/3.jpg\"\n\t},\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n\t\"campaign_name\": \"First Campaign\",\n\t\"suggestions\": [{\n\t\t\"type\": \"message\",\n\t\t\"text\": \"Beautiful!\",\n\t\t\"postback\": \"test\"\n\t}]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media Image",
+          "id": "d5c58a1b-447d-4bae-aa68-6da7aa64a77c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"url\": \"https://www.gstatic.com/webp/gallery/3.jpg\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n    \"campaign_name\": \"First Campaign\",\n    \"bot_name\":\"Routemobile\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media Audio",
+          "id": "9e178a18-21ef-4c30-9236-8441db838624",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\",\n\t\"file_url\": \"http://172.17.202.74:5020/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac120007.txt\",\n    \"campaign_name\": \"First Campaign\",\n    \"bot_name\":\"Routemobile\"\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        },
+        {
+          "name": "Geolocation (JIO)",
+          "id": "88164838-e61b-4347-aa06-e2e8deebf36b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMjI2NDcwNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTIyNjExMDYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.SgQR62pusCuwAanUI3MCmlNJFuruGV2Xn2iR-MurRyM"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"location\",\n    \"latitude\": \"21.7645\",\n    \"longitude\": \"72.1519\",\n    \"label\": \"Bhavnagar\",\n    \"file_url\": \"http://172.16.0.93:8000/sample.csv\",\n    \"campaign_name\": \"First Campaign\",\n    \"bot_name\":\"Routemobile\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/bulk_message"
+          },
+          "response": []
+        }
+      ],
+      "id": "ae33b559-5fd0-4579-aa6c-ee1330405244"
+    },
+    {
       "name": "Login API",
       "id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
       "protocolProfileBehavior": {
