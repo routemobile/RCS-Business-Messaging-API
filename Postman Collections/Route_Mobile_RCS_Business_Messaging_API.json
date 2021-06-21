@@ -350,11 +350,6 @@
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
     },
     {
-      "name": "Session API",
-      "item": [],
-      "id": "142e373b-7ceb-4ed9-ad86-adca3076598e"
-    },
-    {
       "name": "Login API",
       "id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
       "protocolProfileBehavior": {
