@@ -350,6 +350,350 @@
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
     },
     {
+      "name": "Session API Copy",
+      "item": [
+        {
+          "name": "Location suggestion",
+          "id": "c6e956a7-e7be-45e2-8653-1f89991343be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDUyNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY5MjYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.aq7Pa5W9WEdGa6eU3JU7eg-6npJ9Kyqha7mlEUeIoWo"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"text\",\n    \"phone_no\":\"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":37.4220188,\n\t\t\t\"longitude\":-122.0844786,\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media",
+          "id": "6e833bf7-e1ba-4dd6-8b26-d4ddc9689a65",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"url\": \"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media MP4",
+          "id": "ee0ff73a-ff82-4d8e-8f17-43f2aa0a2d5e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"url\": \"{sample video mp4 url https://}\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Rich Card",
+          "id": "c454da65-e73a-4f23-9909-385efe7e082b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"{sample image url https://}\n\t}\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Dial suggestion",
+          "id": "1aadf558-2c39-4c2f-a7d2-8e04d65e33f9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Hello from Route Mobile\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"your number\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "URL suggestion",
+          "id": "e7274776-beff-4573-ab95-df6b2f4f3732",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"+918928894215\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media Audio",
+          "id": "39c7444b-7b65-4db2-a070-b0463ce88ff4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"url\": \"{sample .mp3 url https://}\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media Image",
+          "id": "4b45dae6-4ca0-43da-b4b6-ad026b0fe250",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"url\":\"{sample image url https://}\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Text suggestion",
+          "id": "f86e9cb6-a9b6-4d20-a02c-44bed790a83f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTYxMDcwMDUyNiwiZW1haWwiOiJ2ZWxhbnRhbi5kc2lsdmFAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2MTA2OTY5MjYsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.aq7Pa5W9WEdGa6eU3JU7eg-6npJ9Kyqha7mlEUeIoWo"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"+918928894215\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Geolocation (JIO)",
+          "id": "78279ba8-86c9-40d6-b966-31e45f1d0e5f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"latitude\": \"{example: 18.991341}\",\n    \"longitude\": \"{example: 72.838249}\",\n    \"label\": \"{location name}\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Media PDF",
+          "id": "2b49e795-817d-47af-b827-73861bc50c95",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "0"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"url\": \"{sample pdf url https://}\"\n}\n "
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Text",
+          "id": "0b4729bb-2c14-4b9b-93c0-b2dbe5658e2b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"{mobile number}\",\n  \"bot_name\":\"Routemobile\",\n  \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n  \"text\":\"Hello, testing\"\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
+          "name": "Rich card Carousel",
+          "id": "59e06d51-9eea-4158-b199-9b37139f09d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"Nærøyfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        }
+      ],
+      "id": "8d2f69d5-6d24-4588-a1dd-2ff39b5d3e4d"
+    },
+    {
       "name": "Login API",
       "id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
       "protocolProfileBehavior": {
