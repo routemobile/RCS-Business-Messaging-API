@@ -319,6 +319,32 @@
             "url": "https://apis.rmlconnect.net/rcs/v1/message"
           },
           "response": []
+        },
+        {
+          "name": "Location suggestion",
+          "id": "0e09c043-729e-4da2-b7eb-52d489cedc6b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"{example: 18.991341}\",\n\t\t\t\"longitude\":\"{example: 72.838249}\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
         }
       ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
@@ -391,32 +417,6 @@
             }
           ]
         }
-      },
-      "response": []
-    },
-    {
-      "name": "Location suggestion",
-      "id": "0e09c043-729e-4da2-b7eb-52d489cedc6b",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"{example: 18.991341}\",\n\t\t\t\"longitude\":\"{example: 72.838249}\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}"
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
     }
