@@ -215,6 +215,32 @@
             "url": "https://apis.rmlconnect.net/rcs/v1/message"
           },
           "response": []
+        },
+        {
+          "name": "Geolocation (JIO)",
+          "id": "ea2daa03-94d8-4a46-a7af-a97109463c36",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"{example: 18.991341}\",\n    \"longitude\": \"{example: 72.838249}\",\n    \"label\": \"{location name}\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
         }
       ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
@@ -244,32 +270,6 @@
         },
         "url": "https://apis.rmlconnect.net/auth/v1/login/",
         "description": "You need to create an auth token using this API"
-      },
-      "response": []
-    },
-    {
-      "name": "Geolocation (JIO)",
-      "id": "ea2daa03-94d8-4a46-a7af-a97109463c36",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"{example: 18.991341}\",\n    \"longitude\": \"{example: 72.838249}\",\n    \"label\": \"{location name}\"\n}\n"
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
     },
