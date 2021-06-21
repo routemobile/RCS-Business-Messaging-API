@@ -61,6 +61,32 @@
           "response": []
         },
         {
+          "name": "Media",
+          "id": "91d28a30-b433-43e6-8c92-f9212e53a0c9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
+        },
+        {
           "name": "Media MP4",
           "id": "0cd5fc86-657a-4ee1-a458-afe2de9440f7",
           "protocolProfileBehavior": {
@@ -114,32 +140,6 @@
         },
         "url": "https://apis.rmlconnect.net/auth/v1/login/",
         "description": "You need to create an auth token using this API"
-      },
-      "response": []
-    },
-    {
-      "name": "Media",
-      "id": "91d28a30-b433-43e6-8c92-f9212e53a0c9",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Authorization",
-            "value": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n"
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
     },
