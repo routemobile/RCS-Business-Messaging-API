@@ -293,6 +293,32 @@
             "url": "https://apis.rmlconnect.net/rcs/v1/message"
           },
           "response": []
+        },
+        {
+          "name": "Dial suggestion",
+          "id": "f12403c3-f069-43d1-ba62-703c974a1801",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"{sample text}\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"{contact number}\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
         }
       ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
@@ -322,32 +348,6 @@
         },
         "url": "https://apis.rmlconnect.net/auth/v1/login/",
         "description": "You need to create an auth token using this API"
-      },
-      "response": []
-    },
-    {
-      "name": "Dial suggestion",
-      "id": "f12403c3-f069-43d1-ba62-703c974a1801",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"{sample text}\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"{contact number}\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}"
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
     },
