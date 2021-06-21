@@ -694,6 +694,144 @@
       "id": "8d2f69d5-6d24-4588-a1dd-2ff39b5d3e4d"
     },
     {
+      "name": "Callback Copy",
+      "item": [
+        {
+          "name": "Suggestion reply",
+          "id": "10a4daf5-a5ba-4ae8-a6a1-e38d75251438",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"request_id\": \"105df749-a3eb-4c30-aed2-98ffd78c7143\",\n\t\"user_contact\": \"+917045345285\",\n\t\"timestamp\": \"2021-02-06T03:48:47.699520Z\",\n\t\"bot_name\": \"VMart\",\n\t\"username\": \"vmartretail\",\n\t\"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"event_type\": \"response\",\n\t\"response_text\": \"Nice\",\n\t\"suggestion_type\": \"reply\",\n\t\"response_postback\": \"test\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{PASTE_CLIENT_URL}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Status/Delivery receipts",
+          "id": "90b97e45-96b5-43e4-9fa4-f18a70796cc6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"message_id\": \"f26f2c4c-7662-11eb-a97f-0242ac120005\",\n\t\"user_contact\": \"+917045345285\",\n\t\"message_status\": \"READ\",\n\t\"timestamp\": \"2021-02-24T05:41:30.048454Z\",\n\t\"event_type\": \"status\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{PASTE_CLIENT_URL}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Media",
+          "id": "0bd89892-40d1-47cb-976f-cb55bff2d906",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"request_id\": \"74c42e32-04e8-4736-962a-e102d2aa9453\",\n\t\"user_contact\": \"+917045345285\",\n\t\"timestamp\": \"2021-02-06T03:49:29.418643Z\",\n\t\"bot_name\": \"VMart\",\n\t\"username\": \"vmartretail\",\n\t\"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"event_type\": \"media_message\",\n\t\"media_message\": {\n\t\t\"name\": \"626.jpg\",\n\t\t\"size\": 80933,\n\t\t\"type\": \"image\",\n\t\t\"uri\": \"https://rcs-user-content-ap.storage.googleapis.com/f9b057f8-befb-42ed-a03b-57d5c0be15c1/ad4863eb9b4573e25a40555dcd3880cf49c80086de0ea40a04b41d18c2ef\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{PASTE_CLIENT_URL}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Location",
+          "id": "f8fa45bc-641a-47b9-abcd-dc933a620c0e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"request_id\": \"01bc1fcd-6ceb-473d-bd17-b0979ea2a6b7\",\n\t\"user_contact\": \"+917045345285\",\n\t\"timestamp\": \"2021-02-06T03:50:00.432511Z\",\n\t\"bot_name\": \"VMart\",\n\t\"username\": \"vmartretail\",\n\t\"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"event_type\": \"location\",\n\t\"location_message\": {\n\t\t\"latitude\": 19.1453139,\n\t\t\"longitude\": 72.8236621\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{PASTE_CLIENT_URL}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Text message",
+          "id": "f3623a65-3e46-4dd8-8439-f87b56b941c0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"request_id\": \"45b76468-789a-40c9-a31f-600f002ece07\",\n\t\"user_contact\": \"+917045345285\",\n\t\"timestamp\": \"2021-02-06T03:46:04.474406Z\",\n\t\"bot_name\": \"VMart\",\n\t\"username\": \"vmartretail\",\n\t\"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"event_type\": \"text_message\",\n\t\"text_message\": \"Hi\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{PASTE_CLIENT_URL}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Suggestion action",
+          "id": "8616ab84-03da-46eb-baad-cff111ca394f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"request_id\": \"be1a26da-1a37-4c09-ae0d-f9f729065da0\",\n\t\"user_contact\": \"+917045345285\",\n\t\"timestamp\": \"2021-02-06T03:47:58.149558Z\",\n\t\"bot_name\": \"VMart\",\n\t\"username\": \"vmartretail\",\n\t\"session_id\": \"72cfbb87-f7bf-4e02-bd40-322e4e3591c2\",\n\t\"event_type\": \"response\",\n\t\"response_text\": \"Visit\",\n\t\"suggestion_type\": \"action\",\n\t\"response_postback\": \"url\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{PASTE_CLIENT_URL}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "f7f485f1-0ee4-402d-badb-134255e04450"
+    },
+    {
       "name": "Login API",
       "id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
       "protocolProfileBehavior": {
