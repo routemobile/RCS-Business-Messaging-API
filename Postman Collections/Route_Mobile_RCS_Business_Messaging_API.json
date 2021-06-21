@@ -241,6 +241,32 @@
             "url": "https://apis.rmlconnect.net/rcs/v1/message"
           },
           "response": []
+        },
+        {
+          "name": "URL suggestion",
+          "id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}"
+            },
+            "url": "https://apis.rmlconnect.net/rcs/v1/message"
+          },
+          "response": []
         }
       ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
@@ -270,32 +296,6 @@
         },
         "url": "https://apis.rmlconnect.net/auth/v1/login/",
         "description": "You need to create an auth token using this API"
-      },
-      "response": []
-    },
-    {
-      "name": "URL suggestion",
-      "id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}"
-        },
-        "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
       "response": []
     },
