@@ -6,8 +6,13 @@
   },
   "item": [
     {
+      "name": "New Folder",
+      "item": [],
+      "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
+    },
+    {
       "name": "Media PDF",
-      "_postman_id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
+      "id": "46c079f4-e9dd-44e3-a803-6e43cee7d9dd",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -25,10 +30,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample pdf url https://}\"\n}\n ",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample pdf url https://}\"\n}\n "
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -36,7 +38,7 @@
     },
     {
       "name": "Login API",
-      "_postman_id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
+      "id": "ef4ce702-a5f9-4283-a9f6-bdbf7720b7f0",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -50,10 +52,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"username\":\"Username\",\n  \"password\":\"password\"\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n  \"username\":\"Username\",\n  \"password\":\"password\"\n}"
         },
         "url": "https://apis.rmlconnect.net/auth/v1/login/",
         "description": "You need to create an auth token using this API"
@@ -62,7 +61,7 @@
     },
     {
       "name": "Text",
-      "_postman_id": "1d20eb80-6b1d-4c96-91c1-dadd527f001c",
+      "id": "1d20eb80-6b1d-4c96-91c1-dadd527f001c",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -80,10 +79,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"{mobile number}\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"{sample text}\"\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n  \"type\":\"text\",\n  \"phone_no\":\"{mobile number}\",\n  \"bot_name\":\"Routemobile\",\n  \"text\":\"{sample text}\"\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -91,7 +87,7 @@
     },
     {
       "name": "Media",
-      "_postman_id": "91d28a30-b433-43e6-8c92-f9212e53a0c9",
+      "id": "91d28a30-b433-43e6-8c92-f9212e53a0c9",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -109,10 +105,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -120,7 +113,7 @@
     },
     {
       "name": "Media MP4",
-      "_postman_id": "0cd5fc86-657a-4ee1-a458-afe2de9440f7",
+      "id": "0cd5fc86-657a-4ee1-a458-afe2de9440f7",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -138,10 +131,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample video mp4 url https://}\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"media\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample video mp4 url https://}\",\n    \"phone_no\": \"{mobile number}\"\n\n}\n"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -149,7 +139,7 @@
     },
     {
       "name": "Rich Card",
-      "_postman_id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
+      "id": "ac2f9644-acb8-48ba-a2f6-6faf3c13d03b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -167,10 +157,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"Cute Dog\",\n\t\t\"description\": \"The description for card #2\",\n\t\t\"url\": \"{sample image url https://}\"\n\t}\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n\t\"type\": \"card\",\n\t\"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n\t\"card\": {\n\t\t\"title\": \"{sample title}\",\n\t\t\"description\": \"{sample description}\",\n\t\t\"url\": \"{sample image url https://}\"\n\t}\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -178,7 +165,7 @@
     },
     {
       "name": "Rich card Carousel",
-      "_postman_id": "130cc5b1-b12c-4797-83cf-a4917c6bb95a",
+      "id": "130cc5b1-b12c-4797-83cf-a4917c6bb95a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -196,10 +183,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"Nærøyfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"{sample image url https://}\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t]\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"multiple_cards\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"cards\": [\n    \t{\n    \t\t\"card\": {\n\t\t        \"title\": \"Hello from Yashashvi 12:42 26 August 11\",\n\t\t        \"description\": \"Nærøyfjorden, Norway - from Breiskrednosi. UNESCO World Heritage\",\n\t\t        \"url\": \"{sample image url https://}\"\n\t\t\t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Cute Dog\",\n\t\t        \"description\": \"The description for card #2\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/cute-dog.jpg\"\n\t    \t}\n\t    },\n\t    {\n\t    \t\"card\": {\n\t\t        \"title\": \"Elephant\",\n\t\t        \"description\": \"The description for card #3\",\n\t\t        \"url\": \"https://storage.googleapis.com/kitchen-sink-sample-images/elephant.jpg\"\n\t    \t}\n\t    }\n\t]\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -207,7 +191,7 @@
     },
     {
       "name": "Media Image",
-      "_postman_id": "308b2f59-ad9a-420d-a76c-92f74acd4cdd",
+      "id": "308b2f59-ad9a-420d-a76c-92f74acd4cdd",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -225,10 +209,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"{sample image url https://}\"\n}\n",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\":\"{sample image url https://}\"\n}\n"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -236,7 +217,7 @@
     },
     {
       "name": "Media Audio",
-      "_postman_id": "a132289f-5f52-4c72-bdc3-44273f640257",
+      "id": "a132289f-5f52-4c72-bdc3-44273f640257",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -254,10 +235,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"media\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"url\": \"{sample .mp3 url https://}\"\n}\n"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -265,7 +243,7 @@
     },
     {
       "name": "Geolocation (JIO)",
-      "_postman_id": "ea2daa03-94d8-4a46-a7af-a97109463c36",
+      "id": "ea2daa03-94d8-4a46-a7af-a97109463c36",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -283,10 +261,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"{example: 18.991341}\",\n    \"longitude\": \"{example: 72.838249}\",\n    \"label\": \"{location name}\"\n}\n",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"location\",\n    \"phone_no\": \"{mobile number}\",\n    \"bot_name\":\"Routemobile\",\n    \"latitude\": \"{example: 18.991341}\",\n    \"longitude\": \"{example: 72.838249}\",\n    \"label\": \"{location name}\"\n}\n"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -294,7 +269,7 @@
     },
     {
       "name": "URL suggestion",
-      "_postman_id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
+      "id": "2aa264e3-2d1d-4db8-b733-8fec2d62ba0b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -312,10 +287,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"Open this link\",\n    \"bot_name\":\"Routemobile\",\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"url\",\n\t\t\t\"text\":\"Tap me\",\n\t\t\t\"url\":\"http://routemobile.com\",\n\t\t\t\"postback\":\"url\"\n\t\t}\n\t]\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -323,7 +295,7 @@
     },
     {
       "name": "Text suggestion",
-      "_postman_id": "e4fc6cb5-2358-41f5-ac68-69b35ce413a4",
+      "id": "e4fc6cb5-2358-41f5-ac68-69b35ce413a4",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -341,10 +313,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n      \"bot_name\":\"Routemobile\",\n\n    \"text\": \"Handy suggestions\",\n    \"suggestions\": [\n        {\n            \"type\": \"message\",\n            \"text\": \"Nice\",\n            \"postback\":\"test\"\n        },\n        {\n        \t\"type\":\"message\",\n        \t\"text\":\"Super\",\n        \t\"postback\":\"test\"\n        }\n    ]\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -352,7 +321,7 @@
     },
     {
       "name": "Dial suggestion",
-      "_postman_id": "f12403c3-f069-43d1-ba62-703c974a1801",
+      "id": "f12403c3-f069-43d1-ba62-703c974a1801",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -370,10 +339,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"{sample text}\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"{contact number}\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n\t\"type\":\"text\",\n\t\"phone_no\":\"{mobile number}\",\n\t\"text\":\"{sample text}\",\n      \"bot_name\":\"Routemobile\",\n\n\t\"suggestions\":[\n\t\t{\n\t\t\t\"type\":\"dial\",\n\t\t\t\"text\":\"Call us\",\n\t\t\t\"call_to\":\"{contact number}\",\n\t\t\t\"postback\":\"Call us\"\n\t\t}\n\t]\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
@@ -381,7 +347,7 @@
     },
     {
       "name": "Capability checking API",
-      "_postman_id": "0b4890eb-65eb-42b2-8d28-3a33bdd66a10",
+      "id": "0b4890eb-65eb-42b2-8d28-3a33bdd66a10",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -424,7 +390,7 @@
     },
     {
       "name": "Location suggestion",
-      "_postman_id": "0e09c043-729e-4da2-b7eb-52d489cedc6b",
+      "id": "0e09c043-729e-4da2-b7eb-52d489cedc6b",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -442,10 +408,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"{example: 18.991341}\",\n\t\t\t\"longitude\":\"{example: 72.838249}\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}",
-          "options": {
-            "raw": {}
-          }
+          "raw": "{\n    \"type\": \"text\",\n    \"phone_no\": \"{mobile number}\",\n    \"text\": \"Handy suggestions\",\n      \"bot_name\":\"Routemobile\",\n\n    \"suggestions\": [\n        {\n\t\t\t\"type\": \"view_location\",\n\t\t\t\"text\": \"Mumbai\",\n\t\t\t\"latitude\":\"{example: 18.991341}\",\n\t\t\t\"longitude\":\"{example: 72.838249}\",\n\t\t\t\"postback\":\"Nice\"\n        }\n    ]\n}"
         },
         "url": "https://apis.rmlconnect.net/rcs/v1/message"
       },
