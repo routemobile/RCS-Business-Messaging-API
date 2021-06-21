@@ -7,7 +7,21 @@
   "item": [
     {
       "name": "New API",
-      "item": [],
+      "item": [
+        {
+          "name": "New Request",
+          "id": "db3ff0fa-0b5a-4968-aef8-aaa86bd78601",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": null
+          },
+          "response": []
+        }
+      ],
       "id": "4669be05-3fe7-4f57-b0cd-7c4d6092be30"
     },
     {
