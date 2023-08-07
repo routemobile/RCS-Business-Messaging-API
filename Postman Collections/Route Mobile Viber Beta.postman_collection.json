@@ -1,0 +1,1362 @@
+{
+	"info": {
+		"_postman_id": "afcbcf6e-49af-4ed3-9e70-ae6975439a31",
+		"name": "Route Mobile Viber OpenAPI Specification",
+		"description": "Welcome to the Route Mobile developer hub. You'll find comprehensive Viber API documentation to help you start working with Route Mobile as quickly as possible, as well as support if you get stuck. Let's jump right in!\n\nContact Support:\n Name: Route Mobile Development",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26115958"
+	},
+	"item": [
+		{
+			"name": "Viber Login",
+			"item": [
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apis.rmlconnect.net/auth/v1/login/",
+							"protocol": "https",
+							"host": [
+								"apis",
+								"rmlconnect",
+								"net"
+							],
+							"path": [
+								"auth",
+								"v1",
+								"login",
+								""
+							]
+						},
+						"description": "Login APIs provide a secure and standardized way for end users to add user authentication to their applications. Only authorized users can access sensitive resources or perform specific actions within the application after entering the user authentication details.\n\n**By default, the JSON Web Token (JWT) validity periods are set to one hour.**"
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/auth/v1/login/",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"auth",
+										"v1",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"JWTAUTH\": \"<string>\",\n\t\"user_data\": {\n\t\t\"username\": \"<string>\",\n\t\t\"first_name\": \"<string>\",\n\t\t\"last_name\": \"<string>\",\n\t\t\"email\": \"<string>\",\n\t\t\"phone_number\": \"<string>\",\n\t\t\"password_reset\": \"<boolean>\",\n\t\t\"is_active\": \"<boolean>\",\n\t\t\"is_staff\": \"<boolean>\",\n\t\t\"ip\": \"<string>\",\n\t\t\"child_user\": \"<boolean>\",\n\t\t\"parent_username\": \"<string>\"\n\t}\n}"
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/auth/v1/login/",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"auth",
+										"v1",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\"\n}"
+						},
+						{
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/auth/v1/login/",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"auth",
+										"v1",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Login to Viber Business messaging APIs."
+		},
+		{
+			"name": "Viber Client Callback API",
+			"item": [
+				{
+					"name": "Viber Client Callback",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone_number\": \"<string>\",\n\t\"time\": \"<integer>\",\n\t\"message\": {\n\t\t\"text\": \"<string>\",\n\t\t\"tracking_data\": \"<string>\"\n\t},\n\t\"service_type\": \"<string>\",\n\t\"request_id\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apis.rmlconnect.net/callback",
+							"protocol": "https",
+							"host": [
+								"apis",
+								"rmlconnect",
+								"net"
+							],
+							"path": [
+								"callback"
+							]
+						},
+						"description": "Viber Client Callback APIs allow you to receive real-time notifications for events that occur on your Viber Business Messaging account. These callbacks are triggered by events that occur on the Viber server, and are delivered to a URL that you specify in your webhook configuration."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone_number\": \"<string>\",\n\t\"time\": \"<integer>\",\n\t\"message\": {\n\t\t\"text\": \"<string>\",\n\t\t\"tracking_data\": \"<string>\"\n\t},\n\t\"service_type\": \"<string>\",\n\t\"request_id\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/callback",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"callback"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"description": "Types of Viber client callback APIs."
+		},
+		{
+			"name": "Viber Business Messaging API",
+			"item": [
+				{
+					"name": "Viber Send Single Messages APIs",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"button_text\": \"<string>\",\n\t\"button_link\": \"<string>\",\n\t\"img\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"message_type\": \"<string>\",\n\t\"method\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apis.rmlconnect.net/vbs/api/v2/send",
+							"protocol": "https",
+							"host": [
+								"apis",
+								"rmlconnect",
+								"net"
+							],
+							"path": [
+								"vbs",
+								"api",
+								"v2",
+								"send"
+							]
+						},
+						"description": "Viber Business Send Messages APIs allow businesses to send types of messages to their users on the Viber platform. These APIs enable businesses to engage with their customers, deliver personalized content, and provide interactive experiences through Viber's messaging platform.\n\nHere are some key Viber Business Send Single Message APIs:\n\n- **Single Text Button Image:** Send a single message with text, a button, and an image to a recipient. \n- **Single Text Button:** Send a single text message with a button to a recipient. \n- **Single Text:** Send a single text message to a recipient without any additional elements such as buttons, images, or videos.\n- **Single Image:** Send a single image message to a recipient. \n- **Single File:** Send a single file message to a recipient. \n- **Single Video:** Send a single video message to a recipient. \n- **Single Video Text:** Send a single message with text and a video to a recipient. "
+					},
+					"response": [
+						{
+							"name": "Accepted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"button_text\": \"<string>\",\n\t\"button_link\": \"<string>\",\n\t\"img\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"message_type\": \"<string>\",\n\t\"method\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/send",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"send"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\",\n\t\"request_id\": \"<string>\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"button_text\": \"<string>\",\n\t\"button_link\": \"<string>\",\n\t\"img\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"message_type\": \"<string>\",\n\t\"method\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/send",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"send"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"error\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t]\n}"
+						},
+						{
+							"name": "Authentication Failure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"button_text\": \"<string>\",\n\t\"button_link\": \"<string>\",\n\t\"img\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"message_type\": \"<string>\",\n\t\"method\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/send",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"send"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"response\": \"<string>\"\n}"
+						},
+						{
+							"name": "Page Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/xml"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"button_text\": \"<string>\",\n\t\"button_link\": \"<string>\",\n\t\"img\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"message_type\": \"<string>\",\n\t\"method\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/send",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"send"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n\t<message>(string)</message>\n</element>"
+						},
+						{
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"button_text\": \"<string>\",\n\t\"button_link\": \"<string>\",\n\t\"img\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"message_type\": \"<string>\",\n\t\"method\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/send",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"send"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Viber Send Campaign Messages APIs",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"campaign_id\": \"<string>\",\n\t\"campaign_action\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"file_mimetype\": \"<string>\",\n\t\"filename\": \"<string>\",\n\t\"payload\": {\n\t\t\"text\": \"<string>\",\n\t\t\"button_text\": \"<string>\",\n\t\t\"button_link\": \"<string>\",\n\t\t\"img\": \"<string>\",\n\t\t\"message_type\": \"<string>\",\n\t\t\"method\": \"<string>\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://apis.rmlconnect.net/vbs/api/v2/manage-campaign",
+							"protocol": "https",
+							"host": [
+								"apis",
+								"rmlconnect",
+								"net"
+							],
+							"path": [
+								"vbs",
+								"api",
+								"v2",
+								"manage-campaign"
+							]
+						},
+						"description": "Viber Business Send Campaign Messages APIs allow businesses to send campaign messages to their users on the Viber platform. These APIs enable businesses to engage with their customers, deliver personalized content, and provide interactive experiences through Viber's messaging platform.\n\nHere are some key Viber Business Send Campaign Messages APIs:\n- **Campaign Text Button Image:** Send a campaign message with text, a button, and an image to multiple recipients.\n- **Campaign Text Button:** Send a campaign message with a text and a button to multiple recipients.\n- **Campaign Text:** Send a campaign message with a single text to multiple recipients. \n- **Campaign Image:** Send a campaign message with an image to multiple recipients.\n- **Campaign File:** Send a campaign message with a file attachment to multiple recipients.\n- **Campaign Video:** Send a campaign message with a video to multiple recipients.\n- **Campaign Video Text:** Send a campaign message with text and a video to multiple recipients.\n"
+					},
+					"response": [
+						{
+							"name": "Accepted",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"campaign_id\": \"<string>\",\n\t\"campaign_action\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"file_mimetype\": \"<string>\",\n\t\"filename\": \"<string>\",\n\t\"payload\": {\n\t\t\"text\": \"<string>\",\n\t\t\"button_text\": \"<string>\",\n\t\t\"button_link\": \"<string>\",\n\t\t\"img\": \"<string>\",\n\t\t\"message_type\": \"<string>\",\n\t\t\"method\": \"<string>\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/manage-campaign",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"manage-campaign"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"campaign_id\": \"<string>\",\n\t\"campaign_action\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"file_mimetype\": \"<string>\",\n\t\"filename\": \"<string>\",\n\t\"payload\": {\n\t\t\"text\": \"<string>\",\n\t\t\"button_text\": \"<string>\",\n\t\t\"button_link\": \"<string>\",\n\t\t\"img\": \"<string>\",\n\t\t\"message_type\": \"<string>\",\n\t\t\"method\": \"<string>\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/manage-campaign",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"manage-campaign"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"error\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t]\n}"
+						},
+						{
+							"name": "Authentication Failure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"campaign_id\": \"<string>\",\n\t\"campaign_action\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"file_mimetype\": \"<string>\",\n\t\"filename\": \"<string>\",\n\t\"payload\": {\n\t\t\"text\": \"<string>\",\n\t\t\"button_text\": \"<string>\",\n\t\t\"button_link\": \"<string>\",\n\t\t\"img\": \"<string>\",\n\t\t\"message_type\": \"<string>\",\n\t\t\"method\": \"<string>\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/manage-campaign",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"manage-campaign"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"response\": \"<string>\"\n}"
+						},
+						{
+							"name": "Page Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/xml"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"campaign_id\": \"<string>\",\n\t\"campaign_action\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"file_mimetype\": \"<string>\",\n\t\"filename\": \"<string>\",\n\t\"payload\": {\n\t\t\"text\": \"<string>\",\n\t\t\"button_text\": \"<string>\",\n\t\t\"button_link\": \"<string>\",\n\t\t\"img\": \"<string>\",\n\t\t\"message_type\": \"<string>\",\n\t\t\"method\": \"<string>\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/manage-campaign",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"manage-campaign"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n\t<message>(string)</message>\n</element>"
+						},
+						{
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"campaign_id\": \"<string>\",\n\t\"campaign_action\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"ttl\": \"<string>\",\n\t\"file_mimetype\": \"<string>\",\n\t\"filename\": \"<string>\",\n\t\"payload\": {\n\t\t\"text\": \"<string>\",\n\t\t\"button_text\": \"<string>\",\n\t\t\"button_link\": \"<string>\",\n\t\t\"img\": \"<string>\",\n\t\t\"message_type\": \"<string>\",\n\t\t\"method\": \"<string>\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/manage-campaign",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"manage-campaign"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Campaign File Upload",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{apiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "File",
+									"value": "<string>",
+									"description": "The name of the file with extension. For more information, see the sample files to upload bulk messages:\n- [Bulk Upload File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Upload%20File.txt)\n- [Bulk Upload Campaign File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Campaign%20File.csv)",
+									"type": "text"
+								},
+								{
+									"key": "File_mimetype",
+									"value": "<string>",
+									"description": "The MIME type of the content file. For example, text/plain, text/csv",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://apis.rmlconnect.net/vbs/api/v2/upload",
+							"protocol": "https",
+							"host": [
+								"apis",
+								"rmlconnect",
+								"net"
+							],
+							"path": [
+								"vbs",
+								"api",
+								"v2",
+								"upload"
+							]
+						},
+						"description": "The Campaign File Upload API allows businesses to securely transfer their files to Viber's platform for later use in their campaigns.\n\nWhen businesses want to include media files such as images, videos, audio files, or other types of files in their Viber campaigns, they need to upload those files to Viber's servers. "
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "File",
+											"value": "<string>",
+											"description": "The name of the file with extension. For more information, see the sample files to upload bulk messages:\n- [Bulk Upload File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Upload%20File.txt)\n- [Bulk Upload Campaign File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Campaign%20File.csv)",
+											"type": "text"
+										},
+										{
+											"key": "File_mimetype",
+											"value": "<string>",
+											"description": "The MIME type of the content file. For example, text/plain, text/csv",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/upload",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"message\": \"<string>\",\n\t\"campaign_id\": \"<string>\",\n\t\"file_type\": \"<string>\",\n\t\"file_size\": \"<string>\",\n\t\"total_records\": \"<integer>\",\n\t\"duplicate_records\": \"<integer>\",\n\t\"valid_records\": \"<integer>\"\n}"
+						},
+						{
+							"name": "Authentication Failure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "File",
+											"value": "<string>",
+											"description": "The name of the file with extension. For more information, see the sample files to upload bulk messages:\n- [Bulk Upload File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Upload%20File.txt)\n- [Bulk Upload Campaign File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Campaign%20File.csv)",
+											"type": "text"
+										},
+										{
+											"key": "File_mimetype",
+											"value": "<string>",
+											"description": "The MIME type of the content file. For example, text/plain, text/csv",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/upload",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"upload"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"message\": \"<string>\",\n\t\"reason\": \"<string>\",\n\t\"status\": \"<string>\"\n}"
+						},
+						{
+							"name": "Page Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/xml"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "File",
+											"value": "<string>",
+											"description": "The name of the file with extension. For more information, see the sample files to upload bulk messages:\n- [Bulk Upload File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Upload%20File.txt)\n- [Bulk Upload Campaign File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Campaign%20File.csv)",
+											"type": "text"
+										},
+										{
+											"key": "File_mimetype",
+											"value": "<string>",
+											"description": "The MIME type of the content file. For example, text/plain, text/csv",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/upload",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"upload"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n\t<message>(string)</message>\n</element>"
+						},
+						{
+							"name": "Internal Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "File",
+											"value": "<string>",
+											"description": "The name of the file with extension. For more information, see the sample files to upload bulk messages:\n- [Bulk Upload File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Upload%20File.txt)\n- [Bulk Upload Campaign File](https://github.com/routemobile/Viber-Business-Messages-API/blob/master/Sample%20Bulk%20Campaign%20File.csv)",
+											"type": "text"
+										},
+										{
+											"key": "File_mimetype",
+											"value": "<string>",
+											"description": "The MIME type of the content file. For example, text/plain, text/csv",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://apis.rmlconnect.net/vbs/api/v2/upload",
+									"protocol": "https",
+									"host": [
+										"apis",
+										"rmlconnect",
+										"net"
+									],
+									"path": [
+										"vbs",
+										"api",
+										"v2",
+										"upload"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Types of Viber Business messaging APIs."
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://apis.rmlconnect.net"
+		}
+	]
+}
