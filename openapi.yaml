@@ -6,6 +6,10 @@ info:
     Welcome to the Route Mobile developer hub. You will find comprehensive RCS
     API documentation to help you start working with Route Mobile as quickly as
     possible and support if you get stuck. Let's jump right in!
+
+
+    For more information, see the [Route Mobile Open API
+    Specifications](https://routemobile.github.io/RCS-Business-Messaging-API/RCS.html)
   contact:
     url: https://developers.routemobile.com/
     name: Route Mobile Development
@@ -55,7 +59,7 @@ paths:
                       first_name: RML
                       last_name: Product
                       email: product-desk@routemobile.com
-                      phone_number: '+91989876xxxx'
+                      phone_number: +91989876xxxx
                       password_reset: false
                       is_active: true
                       is_staff: false
@@ -125,9 +129,10 @@ paths:
         content:
           application/json:
             schema:
-              oneOf:
+              anyOf:
                 - title: Notification Message APIs
                   oneOf:
+                    - $ref: '#/components/schemas/rcs_notification_common_msg'
                     - $ref: '#/components/schemas/rcs_notification_text_msg'
                     - $ref: '#/components/schemas/rcs_notification_media_imagemp4_msg'
                     - $ref: >-
@@ -140,6 +145,7 @@ paths:
                     - $ref: '#/components/schemas/rcs_notification_locationsugg_msg'
                 - title: Session Message APIs
                   oneOf:
+                    - $ref: '#/components/schemas/rcs_session_common_msg'
                     - $ref: '#/components/schemas/rcs_session_text_msg'
                     - $ref: '#/components/schemas/rcs_session_mediaimagemp4_msg'
                     - $ref: '#/components/schemas/rcs_session_richcrdstdalone_msg'
@@ -150,6 +156,65 @@ paths:
                     - $ref: '#/components/schemas/rcs_session_locationsugg_msg'
                 - $ref: '#/components/schemas/rcs_template_text_msg'
             examples:
+              Notification - Common:
+                value:
+                  type: text/media/card/multiple_cards
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  text: '{plain text}'
+                  url: '{sample (image/video mp4) url starting with https://}'
+                  extra: '{extra value}'
+                  suggestions:
+                    - type: '{label name}'
+                      text: '{plain text}'
+                      url: '{url with http://}'
+                      latitude: latitude value
+                      longitude: longitude value
+                      call_to: '{your number}'
+                      postback: '{postback text}'
+                    - type: dial
+                      text: '{label}'
+                      postback: '{postback label}'
+                  card:
+                    title: '{label}'
+                    description: '{plain text}'
+                    url: '{sample (image/video mp4) url starting with https://}'
+                    suggestions:
+                      - type: '{label name}'
+                        text: '{plain text}'
+                        latitude: latitude value
+                        longitude: longitude value
+                        postback: '{postback text}'
+                  cards:
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                        suggestions:
+                          - type: message
+                            text: '{text}'
+                            postback: '{postback text}'
+                          - type: message
+                            text: '{text}'
+                            postback: '{postback text}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                        suggestions:
+                          - type: dial
+                            text: '{label}'
+                            call_to: '{your number}'
+                            postback: '{postback label}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                        suggestions:
+                          - type: url
+                            text: '{label}'
+                            url: '{url with http://}'
+                            postback: '{postback label}'
               Notification - Text:
                 value:
                   type: text
@@ -286,7 +351,7 @@ paths:
                       longitude: '{longitude value}'
                       postback: '{postback text}'
                   fallback_text: '{value {#var#} value}'
-              Template - Text:
+              India Template - Text:
                 value:
                   type: template
                   phone_no: '{mobile number}'
@@ -298,7 +363,7 @@ paths:
                       '{var1}': '{value}'
                       '{var2}': '{value}'
                   fallback_text: '{value {#var#} value}'
-              Template - Rich Card Standalone:
+              India Template - Rich Card Standalone:
                 value:
                   type: template
                   phone_no: '{mobile number}'
@@ -310,7 +375,7 @@ paths:
                       '{var1}': '{value}'
                       '{var2}': '{value}'
                   fallback_text: '{value {#var#} value}'
-              Template - Rich Card Carousel:
+              India Template - Rich Card Carousel:
                 value:
                   type: template
                   phone_no: '{mobile number}'
@@ -322,13 +387,72 @@ paths:
                       '{var1}': '{value}'
                       '{var2}': '{value}'
                   fallback_text: '{value {#var#} value}'
-              Template - Fallback API:
+              India Template - Fallback API:
                 value:
                   type: text
                   phone_no: '{mobile number with country code}'
                   bot_name: Routemobile
                   text: Hi
                   fallback_text: Your test OTP is {#var#}- 29 Three
+              Session - Common:
+                value:
+                  type: text/media/card/multiple_cards
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  text: '{plain text}'
+                  url: '{sample (image/video mp4) url starting with https://}'
+                  extra: '{extra value}'
+                  suggestions:
+                    - type: '{label name}'
+                      text: '{plain text}'
+                      url: '{url with http://}'
+                      latitude: latitude value
+                      longitude: longitude value
+                      call_to: '{your number}'
+                      postback: '{postback text}'
+                    - type: dial
+                      text: '{label}'
+                      postback: '{postback label}'
+                  card:
+                    title: '{label}'
+                    description: '{plain text}'
+                    url: '{sample (image/video mp4) url starting with https://}'
+                    suggestions:
+                      - type: '{label name}'
+                        text: '{plain text}'
+                        latitude: latitude value
+                        longitude: longitude value
+                        postback: '{postback text}'
+                  cards:
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                        suggestions:
+                          - type: message
+                            text: '{text}'
+                            postback: '{postback text}'
+                          - type: message
+                            text: '{text}'
+                            postback: '{postback text}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                        suggestions:
+                          - type: dial
+                            text: '{label}'
+                            call_to: '{your number}'
+                            postback: '{postback label}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                        suggestions:
+                          - type: url
+                            text: '{label}'
+                            url: '{url with http://}'
+                            postback: '{postback label}'
               Session - Text:
                 value:
                   type: text
@@ -1605,7 +1729,7 @@ paths:
                   media_size: '193386'
                   media_type: image
                   media_uri: >-
-                    https://rcs-user-content-ap.storage.googleapis.com/806e8c3c-fe0a-4d16-bfbf-b5251e2f50e0/a502a4e475d7f700cead51b416a1040ed53f2c607a6d87790561d5xxxxxx
+                    https://www.example.com/a502a4e475d7f700cead51b416a1040ed53f2c607a6d87790561d5xxxxxx
                   request_id: MxE3=LDqIZRqKVzsjLPIxxxx
                   session_id: b19d033c-a159-4565-8d3d-8d527abaxxxx
                   timestamp: 2023-04-02T10:49:30.9598xxxx
@@ -1654,7 +1778,7 @@ paths:
                   media_size: '8372956'
                   media_type: video
                   media_uri: >-
-                    https://rcs-user-content-ap.storage.googleapis.com/ab43fe59-d75e-473a-9327-a4cab1c70a31/8ffc96b86dd5a47a1b3e0c5baf68b952998e561e681cf92f6539xxxxxxx
+                    https://www.example.com/8ffc96b86dd5a47a1b3e0c5baf68b952998e561e681cf92f6539xxxxxxx
                   request_id: Mx1DOwT7ZHRN-8Gzu2PFxxxxx
                   session_id: b19d033c-a159-4565-8d3d-8d527abxxxxx
                   timestamp: 2023-04-02T10:50:45.8520xxx
@@ -1668,7 +1792,7 @@ paths:
                   media_size: '160827'
                   media_type: application
                   media_uri: >-
-                    https://rcs-user-content-ap.storage.googleapis.com/7bbb0640-ab70-45f8-9151-6912468c4cf7/9108880408b94cf4a9dfb48002ac580ed868962d757321463a2b8dxxxxx
+                    https://www.example.com/9108880408b94cf4a9dfb48002ac580ed868962d757321463a2b8dxxxxx
                   request_id: Mxi3EWJ6TvQkeJZ4MZbPxxxx2
                   session_id: b19d033c-a159-4565-8d3d-8d527abxxxxx1
                   timestamp: 2023-04-02T10:51:33.554xxxxx
@@ -1780,6 +1904,152 @@ components:
         parent_username:
           type: string
           description: The user of child's parent.
+    rcs_notification_common_msg:
+      type: object
+      title: Notification - Common
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent.\r\n\r\n"
+          example: Text. Media, Card, or Multiple Cards
+        phone_no:
+          type: string
+          description: The recipient's phone number, including the country code.
+        bot_name:
+          type: string
+          description: The name of the bot sending the message.
+        text:
+          type: string
+          description: >-
+            The plain text content of the message. This field is required for
+            "text" type messages.
+        url:
+          type: string
+          description: >-
+            The URL of the media (image or video MP4) starting with https:// to
+            be included in the message. This field is optional for "media" type
+            messages.
+        extra:
+          type: string
+          description: An extra value that can be included in the message.
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"
+              url:
+                type: string
+                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+              latitude:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              longitude:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              call_to:
+                type: string
+                description: "The sender phone number.\r\n\r\n"
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
+        card:
+          type: object
+          description: "An object representing a standalone rich card. It includes a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"card\" type messages.\r\n\r\n"
+          properties:
+            title:
+              type: string
+              description: "The label name for the card.\r\n\r\n"
+            description:
+              type: string
+              description: "A short description of the card.\r\n\r\n"
+            url:
+              type: string
+              description: The (image/video mp4) url starting with https:// .
+            suggestions:
+              type: array
+              description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    description: "The label name for the suggestion.\r\n\r\n"
+                  text:
+                    type: string
+                    description: "The plain text content of the suggestion.\r\n\r\n"
+                  latitude:
+                    type: string
+                    description: "The latitude value associated with the suggestion.\r\n\r\n"
+                  longitude:
+                    type: string
+                    description: "The longitude value associated with the suggestion.\r\n\r\n"
+                  postback:
+                    type: string
+                    description: "The postback text or action associated with the suggestion.\r\n\r\n"
+          required:
+            - title
+            - description
+            - url
+        cards:
+          type: array
+          description: "An array of objects representing multiple rich cards. Each card object has a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"multiple_cards\" type messages.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              card:
+                type: object
+                description: "An object representing a standalone rich card. It includes a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"card\" type messages.\r\n\r\n"
+                properties:
+                  title:
+                    type: string
+                    description: "The label name for the card.\r\n\r\n"
+                  description:
+                    type: string
+                    description: "A short description of the card.\r\n\r\n"
+                  url:
+                    type: string
+                    description: The (image/video mp4) url starting with https:// .
+                  suggestions:
+                    type: array
+                    description: >-
+                      An array of suggestions shown as actions for the endpoint.
+                      Each suggestion can have a "text" field with plain text
+                      content. This field is optional.
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: The label name for the suggestion.
+                        text:
+                          type: string
+                          description: The plain text content of the suggestion.
+                        postback:
+                          type: string
+                          description: >-
+                            The postback text or action associated with the
+                            suggestion.
+                        call_to:
+                          type: string
+                          description: "The sender phone number.\r\n\r\n"
+                        url:
+                          type: string
+                          description: The (image/video mp4) url starting with https:// .
+                required:
+                  - title
+                  - description
+                  - url
+      required:
+        - type
+        - phone_no
+        - bot_name
     rcs_notification_text_msg:
       type: object
       title: Notification - Text
@@ -2248,6 +2518,152 @@ components:
         - phone_no
         - bot_name
         - text
+    rcs_session_common_msg:
+      type: object
+      title: Session - Common
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent.\r\n\r\n"
+          example: Text. Media, Card, or Multiple Cards
+        phone_no:
+          type: string
+          description: The recipient's phone number, including the country code.
+        bot_name:
+          type: string
+          description: The name of the bot sending the message.
+        text:
+          type: string
+          description: >-
+            The plain text content of the message. This field is required for
+            "text" type messages.
+        url:
+          type: string
+          description: >-
+            The URL of the media (image or video MP4) starting with https:// to
+            be included in the message. This field is optional for "media" type
+            messages.
+        extra:
+          type: string
+          description: An extra value that can be included in the message.
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"
+              url:
+                type: string
+                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+              latitude:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              longitude:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              call_to:
+                type: string
+                description: "The sender phone number.\r\n\r\n"
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
+        card:
+          type: object
+          description: "An object representing a standalone rich card. It includes a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"card\" type messages.\r\n\r\n"
+          properties:
+            title:
+              type: string
+              description: "The label name for the card.\r\n\r\n"
+            description:
+              type: string
+              description: "A short description of the card.\r\n\r\n"
+            url:
+              type: string
+              description: The (image/video mp4) url starting with https:// .
+            suggestions:
+              type: array
+              description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    description: "The label name for the suggestion.\r\n\r\n"
+                  text:
+                    type: string
+                    description: "The plain text content of the suggestion.\r\n\r\n"
+                  latitude:
+                    type: string
+                    description: "The latitude value associated with the suggestion.\r\n\r\n"
+                  longitude:
+                    type: string
+                    description: "The longitude value associated with the suggestion.\r\n\r\n"
+                  postback:
+                    type: string
+                    description: "The postback text or action associated with the suggestion.\r\n\r\n"
+          required:
+            - title
+            - description
+            - url
+        cards:
+          type: array
+          description: "An array of objects representing multiple rich cards. Each card object has a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"multiple_cards\" type messages.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              card:
+                type: object
+                description: "An object representing a standalone rich card. It includes a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"card\" type messages.\r\n\r\n"
+                properties:
+                  title:
+                    type: string
+                    description: "The label name for the card.\r\n\r\n"
+                  description:
+                    type: string
+                    description: "A short description of the card.\r\n\r\n"
+                  url:
+                    type: string
+                    description: The (image/video mp4) url starting with https:// .
+                  suggestions:
+                    type: array
+                    description: >-
+                      An array of suggestions shown as actions for the endpoint.
+                      Each suggestion can have a "text" field with plain text
+                      content. This field is optional.
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          type: string
+                          description: The label name for the suggestion.
+                        text:
+                          type: string
+                          description: The plain text content of the suggestion.
+                        postback:
+                          type: string
+                          description: >-
+                            The postback text or action associated with the
+                            suggestion.
+                        call_to:
+                          type: string
+                          description: "The sender phone number.\r\n\r\n"
+                        url:
+                          type: string
+                          description: The (image/video mp4) url starting with https:// .
+                required:
+                  - title
+                  - description
+                  - url
+      required:
+        - type
+        - phone_no
+        - bot_name
     rcs_session_text_msg:
       type: object
       title: Session - Text
@@ -3327,7 +3743,7 @@ components:
               description: "The message type as \"template\".\r\n"
             phone_no:
               type: string
-              description: "The phone number of the recipient, including the country code\r\n"
+              description: "The phone number of the recipient, including the country code.\r\n"
             bot_name:
               type: string
               description: "The name of the bot sending the message.\r\n"
