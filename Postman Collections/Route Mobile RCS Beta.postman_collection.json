@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "53eaccba-8f0c-4dfd-840f-5f54f98cbdd1",
-		"name": "Route Mobile Rich Communication Services (RCS) API Documentation",
-		"description": "Welcome to the Route Mobile developer hub. You will find comprehensive RCS API documentation to help you start working with Route Mobile as quickly as possible and support if you get stuck. Let's jump right in!\n\nContact Support:\n Name: Route Mobile Development",
+		"_postman_id": "aee6022d-e41d-4764-9132-ef2b3b7c5d47",
+		"name": "Route Mobile RCS API Documentation",
+		"description": "Welcome to the Route Mobile developer hub. You will find comprehensive RCS API documentation to help you start working with Route Mobile as quickly as possible and support if you get stuck. Let's jump right in!\n\nFor more information, see the [Route Mobile Open API Specifications](https://routemobile.github.io/RCS-Business-Messaging-API/RCS.html)\n\nContact Support:\n Name: Route Mobile Development",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26115958"
 	},
@@ -26,7 +26,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+							"raw": "{\n\t\"password\": \"password\",\n\t\"username\": \"username\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -68,7 +68,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"raw": "{\n\t\"password\": \"password\",\n\t\"username\": \"username\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -102,7 +102,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"JWTAUTH\": \"<string>\",\n\t\"user_data\": {\n\t\t\"username\": \"<string>\",\n\t\t\"first_name\": \"<string>\",\n\t\t\"last_name\": \"<string>\",\n\t\t\"email\": \"<string>\",\n\t\t\"phone_number\": \"<string>\",\n\t\t\"password_reset\": \"<boolean>\",\n\t\t\"is_active\": \"<boolean>\",\n\t\t\"is_staff\": \"<boolean>\",\n\t\t\"ip\": \"<string>\",\n\t\t\"child_user\": \"<boolean>\",\n\t\t\"parent_username\": \"<string>\"\n\t}\n}"
+							"body": "{\n\t\"JWTAUTH\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGVtbyIsInVzZXJuYW1lIjoiZGVtbyIsImV4cCI6MTY4Mzg4OTI0MSwiZW1haWwiOiJwcm9kdWN0LWRlc2tAcm91dGVtb2JpbGUuY29tIiwib3JpZ19pYXQiOjE2ODM4ODU2NDEsImN1c3RvbWVyX2lkIjoiOWlyNURnN2J2c0NBIn0.gu2LO-bDVPqa35v_MnyO1KKeZzhDHHWLta5Gxxxxxx\",\n\t\"user_data\": {\n\t\t\"username\": \"demo\",\n\t\t\"first_name\": \"RML\",\n\t\t\"last_name\": \"Product\",\n\t\t\"email\": \"product-desk@routemobile.com\",\n\t\t\"phone_number\": \"+91989876xxxx\",\n\t\t\"password_reset\": false,\n\t\t\"is_active\": true,\n\t\t\"is_staff\": false,\n\t\t\"ip\": \"1stepauth\",\n\t\t\"child_user\": false,\n\t\t\"parent_username\": \"\"\n\t}\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -120,7 +120,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"raw": "{\n\t\"password\": \"password\",\n\t\"username\": \"username\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -154,7 +154,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"invalid credentials or the account has been deactivated\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -172,7 +172,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"password\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"raw": "{\n\t\"password\": \"password\",\n\t\"username\": \"username\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -206,7 +206,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"<exception>\"\n}"
 						}
 					]
 				}
@@ -251,7 +251,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+							"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -297,7 +297,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -330,7 +330,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\",\n\t\"id\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"Message request has been created\",\n\t\"id\": \"167de12a-fe0e-11ed-a253-0a58a9fxxxxx\"\n}"
 						},
 						{
 							"name": "Bad Request",
@@ -353,7 +353,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -386,7 +386,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": {\n\t\t\"text\": [\n\t\t\t\"<string>\",\n\t\t\t\"<string>\"\n\t\t]\n\t}\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"errors\": {\n\t\t\"text\": [\n\t\t\t\"Unknown field.\"\n\t\t]\n\t}\n}"
 						},
 						{
 							"name": "Authentication Failure",
@@ -409,7 +409,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -442,7 +442,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"Unauthorized\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -465,7 +465,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -498,7 +498,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"Please input a valid/authorized bot name\"\n}"
 						},
 						{
 							"name": "Page Not Found",
@@ -521,7 +521,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -554,7 +554,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"sunt nostrud in ex Duis\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -577,7 +577,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"extra\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text/media/card/multiple_cards\",\n\t\"phone_no\": \"{mobile number with country code}\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\"extra\": \"{extra value}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"dial\",\n\t\t\t\"text\": \"{label}\",\n\t\t\t\"postback\": \"{postback label}\"\n\t\t}\n\t],\n\t\"card\": {\n\t\t\"title\": \"{label}\",\n\t\t\"description\": \"{plain text}\",\n\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\"suggestions\": [\n\t\t\t{\n\t\t\t\t\"type\": \"{label name}\",\n\t\t\t\t\"text\": \"{plain text}\",\n\t\t\t\t\"latitude\": \"latitude value\",\n\t\t\t\t\"longitude\": \"longitude value\",\n\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t}\n\t\t]\n\t},\n\t\"cards\": [\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"message\",\n\t\t\t\t\t\t\"text\": \"{text}\",\n\t\t\t\t\t\t\"postback\": \"{postback text}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"dial\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"call_to\": \"{your number}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"card\": {\n\t\t\t\t\"title\": \"{label}\",\n\t\t\t\t\"description\": \"{plain text}\",\n\t\t\t\t\"url\": \"{sample (image/video mp4) url starting with https://}\",\n\t\t\t\t\"suggestions\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"type\": \"url\",\n\t\t\t\t\t\t\"text\": \"{label}\",\n\t\t\t\t\t\t\"url\": \"{url with http://}\",\n\t\t\t\t\t\t\"postback\": \"{postback label}\"\n\t\t\t\t\t}\n\t\t\t\t]\n\t\t\t}\n\t\t}\n\t]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -610,7 +610,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"errors\": \"Contact administration for more info\"\n}"
 						}
 					]
 				}
@@ -655,7 +655,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+							"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -701,7 +701,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -734,7 +734,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\",\n\t\"campaign_id\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"Message request has been created\",\n\t\"campaign_id\": \"1xx\"\n}"
 						},
 						{
 							"name": "Bad Request",
@@ -757,7 +757,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -790,7 +790,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": {\n\t\t\"text\": [\n\t\t\t\"<string>\",\n\t\t\t\"<string>\"\n\t\t]\n\t}\n}"
+							"body": "{\n\t\"status\": \"string\",\n\t\"errors\": {\n\t\t\"text\": [\n\t\t\t\"string\"\n\t\t]\n\t}\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -813,7 +813,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -846,7 +846,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"string\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -869,7 +869,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -902,7 +902,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"string\"\n}"
 						},
 						{
 							"name": "Not Found",
@@ -925,7 +925,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -958,7 +958,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"sunt nostrud in ex Duis\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -981,7 +981,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"type\": \"<string>\",\n\t\"file_url\": \"<string>\",\n\t\"campaign_name\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"text\": \"<string>\",\n\t\"country_code\": \"<string>\",\n\t\"scheduled_time\": \"<string>\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"<string>\",\n\t\t\t\"text\": \"<string>\",\n\t\t\t\"latitude\": \"<string>\",\n\t\t\t\"longitude\": \"<string>\",\n\t\t\t\"postback\": \"<string>\"\n\t\t}\n\t],\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"type\": \"text\",\n\t\"country_code\": \"+91\",\n\t\"file_url\": \"http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxx.txt\",\n\t\"campaign_name\": \"Testing bulk APIs\",\n\t\"scheduled_time\": \"2021-03-13 11:30:00\",\n\t\"bot_name\": \"{RML agent name}\",\n\t\"text\": \"{plain text}\",\n\t\"suggestions\": [\n\t\t{\n\t\t\t\"type\": \"{label name}\",\n\t\t\t\"text\": \"{plain text}\",\n\t\t\t\"latitude\": \"{latitude value}\",\n\t\t\t\"longitude\": \"{longitude value}\",\n\t\t\t\"postback\": \"{postback text}\"\n\t\t}\n\t],\n\t\"fallback_text\": \"{value {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1014,7 +1014,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"string\",\n\t\"errors\": \"string\"\n}"
 						}
 					]
 				}
@@ -1059,7 +1059,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+							"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1105,7 +1105,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1138,7 +1138,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"request_id\": \"<string>\",\n\t\"status\": \"<string>\",\n\t\"timestamp\": \"<string>\"\n}"
+							"body": "{\n\t\"request_id\": \"eu sint cillum\",\n\t\"status\": \"esse sed ea eiusmod laboris\",\n\t\"timestamp\": \"esse Ut Duis irure\"\n}"
 						},
 						{
 							"name": "Bad Request",
@@ -1161,7 +1161,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1194,7 +1194,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": {\n\t\t\"payment\": {\n\t\t\t\"region\": [\n\t\t\t\t\"<string>\",\n\t\t\t\t\"<string>\"\n\t\t\t]\n\t\t}\n\t}\n}"
+							"body": "{\n\t\"status\": \"ad ea\",\n\t\"errors\": {\n\t\t\"payment\": {\n\t\t\t\"region\": [\n\t\t\t\t\"nostrud aute eu \",\n\t\t\t\t\"ea laboris nostrud\"\n\t\t\t]\n\t\t}\n\t}\n}"
 						},
 						{
 							"name": "Unauthorized",
@@ -1217,7 +1217,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1250,7 +1250,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"laboris ullamco ut veniam\"\n}"
 						},
 						{
 							"name": "Forbidden",
@@ -1273,7 +1273,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1306,7 +1306,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"laboris ullamco ut veniam\"\n}"
 						},
 						{
 							"name": "Page Not Found",
@@ -1329,7 +1329,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1362,7 +1362,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"detail\": \"<string>\"\n}"
+							"body": "{\n\t\"detail\": \"Duis est fugiat\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -1385,7 +1385,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"<string>\",\n\t\t\t\"currency\": \"<string>\"\n\t\t},\n\t\t\"mode\": \"<string>\",\n\t\t\"region\": \"<string>\",\n\t\t\"merchant_name\": \"<string>\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"<string>\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"<string>\",\n\t\t\"<string>\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"<string>\",\n\t\t\"phone_no\": \"<string>\",\n\t\t\"bot_name\": \"<string>\",\n\t\t\"template\": {\n\t\t\t\"name\": \"<string>\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"<string>\",\n\t\t\t\t\"{var2}\": \"<string>\"\n\t\t\t}\n\t\t}\n\t}\n}",
+									"raw": "{\n\t\"payment\": {\n\t\t\"amount\": {\n\t\t\t\"value\": \"{Amount in paise}\",\n\t\t\t\"currency\": \"INR\"\n\t\t},\n\t\t\"mode\": \"ALL\",\n\t\t\"region\": \"INDIA\",\n\t\t\"merchant_name\": \"Routemobile\",\n\t\t\"extra\": {\n\t\t\t\"some\": \"key\"\n\t\t}\n\t},\n\t\"channels\": [\n\t\t\"rcs\"\n\t],\n\t\"rcs\": {\n\t\t\"type\": \"template\",\n\t\t\"phone_no\": \"{Phone number with county code}\",\n\t\t\"bot_name\": \"Routemobile\",\n\t\t\"template\": {\n\t\t\t\"name\": \"{Template name}\",\n\t\t\t\"variables\": {\n\t\t\t\t\"{var1}\": \"{Name}\",\n\t\t\t\t\"{var2}\": \"<PAYMENT_URL>\"\n\t\t\t}\n\t\t}\n\t}\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1418,7 +1418,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"proident\",\n\t\"errors\": \"cillum aute Excepteur\"\n}"
 						}
 					]
 				}
@@ -1463,7 +1463,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+							"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C0xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1509,7 +1509,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C0xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1542,7 +1542,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"success\",\n\t\"message\": \"Is Typing request sent successfully\"\n}"
 						},
 						{
 							"name": "Bad Request",
@@ -1565,7 +1565,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C0xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1598,7 +1598,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Is Typing request could not be sent, please contact administration\"\n}"
 						},
 						{
 							"name": "Authentication Failure",
@@ -1621,7 +1621,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C0xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1654,7 +1654,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Unauthorised\"\n}"
 						},
 						{
 							"name": "Page Not Found",
@@ -1677,7 +1677,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C0xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1710,7 +1710,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"molli\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -1733,7 +1733,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C0xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1766,7 +1766,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"errors\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"errors\": \"Contact administration for more info\"\n}"
 						}
 					]
 				},
@@ -1806,7 +1806,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+							"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C09xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1852,7 +1852,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C09xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1885,7 +1885,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"success\",\n\t\"message\": \"Read request sent successfully\"\n}"
 						},
 						{
 							"name": "Bad Request",
@@ -1908,7 +1908,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C09xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1941,7 +1941,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Read request could not be sent, please contact administration\"\n}"
 						},
 						{
 							"name": "Authentication Failure",
@@ -1964,7 +1964,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C09xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1997,7 +1997,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Unauthorised\"\n}"
 						},
 						{
 							"name": "Page Not Found",
@@ -2020,7 +2020,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C09xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2053,7 +2053,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"molli\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -2076,7 +2076,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"MxZBgOG-VMSraf8Py-C09xxxx\",\n\t\"phone_no\": \"Number with country code\",\n\t\"bot_name\": \"Routemobile\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2109,7 +2109,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Read request could not be sent, please contact administration\"\n}"
 						}
 					]
 				},
@@ -2149,7 +2149,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"fallback_text\": \"<string>\"\n}",
+							"raw": "{\n\t\"request_id\": \"{RML request id}\",\n\t\"phone_no\": \"{Phone Number with country code}\",\n\t\"bot_name\": \"{RML Agent Name}\",\n\t\"fallback_text\": \"{sms template {#var#} value}\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -2195,7 +2195,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"{RML request id}\",\n\t\"phone_no\": \"{Phone Number with country code}\",\n\t\"bot_name\": \"{RML Agent Name}\",\n\t\"fallback_text\": \"{sms template {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2228,7 +2228,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"success\",\n\t\"message\": \"Message Revoke request sent successfully\"\n}"
 						},
 						{
 							"name": "Bad Request",
@@ -2251,7 +2251,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"{RML request id}\",\n\t\"phone_no\": \"{Phone Number with country code}\",\n\t\"bot_name\": \"{RML Agent Name}\",\n\t\"fallback_text\": \"{sms template {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2284,7 +2284,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Revoke request could not be sent, please contact administration\"\n}"
 						},
 						{
 							"name": "Authentication Failure",
@@ -2307,7 +2307,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"{RML request id}\",\n\t\"phone_no\": \"{Phone Number with country code}\",\n\t\"bot_name\": \"{RML Agent Name}\",\n\t\"fallback_text\": \"{sms template {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2340,7 +2340,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Unauthorised\"\n}"
 						},
 						{
 							"name": "Page Not Found",
@@ -2363,7 +2363,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"{RML request id}\",\n\t\"phone_no\": \"{Phone Number with country code}\",\n\t\"bot_name\": \"{RML Agent Name}\",\n\t\"fallback_text\": \"{sms template {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2396,7 +2396,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"message\": \"molli\"\n}"
 						},
 						{
 							"name": "Internal Server Error",
@@ -2419,7 +2419,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"request_id\": \"<string>\",\n\t\"phone_no\": \"<string>\",\n\t\"bot_name\": \"<string>\",\n\t\"fallback_text\": \"<string>\"\n}",
+									"raw": "{\n\t\"request_id\": \"{RML request id}\",\n\t\"phone_no\": \"{Phone Number with country code}\",\n\t\"bot_name\": \"{RML Agent Name}\",\n\t\"fallback_text\": \"{sms template {#var#} value}\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -2452,7 +2452,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n\t\"status\": \"<string>\",\n\t\"message\": \"<string>\"\n}"
+							"body": "{\n\t\"status\": \"failed\",\n\t\"message\": \"Revoke request could not be sent, please contact administration\"\n}"
 						}
 					]
 				}
@@ -2473,7 +2473,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"bot_name\": \"<string>\",\n\t\"event_type\": \"<string>\",\n\t\"request_id\": \"<string>\",\n\t\"session_id\": \"<string>\",\n\t\"text_message\": \"<string>\",\n\t\"timestamp\": \"<string>\",\n\t\"user_contact\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+							"raw": "{\n\t\"bot_name\": \"Routemobile\",\n\t\"event_type\": \"text_message\",\n\t\"request_id\": \"Mx068dFMQbSWm7zPxvVFIxxxx\",\n\t\"session_id\": \"1d80575f-fe51-4ea9-b1b4-883ded8fxxxx\",\n\t\"text_message\": \"Hi\",\n\t\"timestamp\": \"2023-05-23T09:14:36.2599xxx\",\n\t\"user_contact\": \"+91903695xxxx\",\n\t\"username\": \"demo\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -2508,7 +2508,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"bot_name\": \"<string>\",\n\t\"event_type\": \"<string>\",\n\t\"request_id\": \"<string>\",\n\t\"session_id\": \"<string>\",\n\t\"text_message\": \"<string>\",\n\t\"timestamp\": \"<string>\",\n\t\"user_contact\": \"<string>\",\n\t\"username\": \"<string>\"\n}",
+									"raw": "{\n\t\"bot_name\": \"Routemobile\",\n\t\"event_type\": \"text_message\",\n\t\"request_id\": \"Mx068dFMQbSWm7zPxvVFIxxxx\",\n\t\"session_id\": \"1d80575f-fe51-4ea9-b1b4-883ded8fxxxx\",\n\t\"text_message\": \"Hi\",\n\t\"timestamp\": \"2023-05-23T09:14:36.2599xxx\",\n\t\"user_contact\": \"+91903695xxxx\",\n\t\"username\": \"demo\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
