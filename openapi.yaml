@@ -120,6 +120,7 @@ paths:
 
         - **India Template API:** Create interactive and visually rich content
         to engage customers.
+
       operationId: textTemplate
       requestBody:
         description: |2-
@@ -135,6 +136,8 @@ paths:
                     - $ref: '#/components/schemas/rcs_notification_common_msg'
                     - $ref: '#/components/schemas/rcs_notification_text_msg'
                     - $ref: '#/components/schemas/rcs_notification_media_imagemp4_msg'
+                    - $ref: '#/components/schemas/rcs_notification_videothumbnailurl_msg'                   
+                    - $ref: '#/components/schemas/rcs_notification_videothumbnailid_msg'
                     - $ref: >-
                         #/components/schemas/rcs_notification_richcrdstdalone_msg
                     - $ref: >-
@@ -143,17 +146,26 @@ paths:
                     - $ref: '#/components/schemas/rcs_notification_textsugg_msg'
                     - $ref: '#/components/schemas/rcs_notification_dialsugg_msg'
                     - $ref: '#/components/schemas/rcs_notification_locationsugg_msg'
+                    - $ref: '#/components/schemas/rcs_notification_calendarsugg_msg'
+                    - $ref: '#/components/schemas/rcs_notification_mediaid_msg' 
+                    - $ref: '#/components/schemas/rcs_notification_carslwithids_msg'    
                 - title: Session Message APIs
                   oneOf:
                     - $ref: '#/components/schemas/rcs_session_common_msg'
                     - $ref: '#/components/schemas/rcs_session_text_msg'
                     - $ref: '#/components/schemas/rcs_session_mediaimagemp4_msg'
+                    - $ref: '#/components/schemas/rcs_session_videothumbnailurl_msg'         
+                    - $ref: '#/components/schemas/rcs_session_videothumbnailid_msg'                            
                     - $ref: '#/components/schemas/rcs_session_richcrdstdalone_msg'
                     - $ref: '#/components/schemas/rcs_session_richcrdcarousel_msg'
                     - $ref: '#/components/schemas/rcs_session_urlsugg_msg'
                     - $ref: '#/components/schemas/rcs_session_textsugg_msg'
                     - $ref: '#/components/schemas/rcs_session_dialsugg_msg'
                     - $ref: '#/components/schemas/rcs_session_locationsugg_msg'
+                    - $ref: '#/components/schemas/rcs_session_calendarsugg_msg'
+                    - $ref: '#/components/schemas/rcs_session_mediaid_msg' 
+                    - $ref: '#/components/schemas/rcs_session_carslwithids_msg'                                  
+
                 - $ref: '#/components/schemas/rcs_template_text_msg'
             examples:
               Notification - Common:
@@ -175,6 +187,13 @@ paths:
                     - type: dial
                       text: '{label}'
                       postback: '{postback label}'
+                    - type: calendar
+                      postback: "{postback text}"
+                      text: Save to calendar
+                      start: "{start time}"
+                      end: "{end time}"
+                      title: "{title name}"
+                      description: "{Description of the calendar event}"
                   card:
                     title: '{label}'
                     description: '{plain text}'
@@ -185,6 +204,13 @@ paths:
                         latitude: latitude value
                         longitude: longitude value
                         postback: '{postback text}'
+                      - type: calendar
+                        postback: "{postback text}"
+                        text: Save to calendar
+                        start: "{start time}"
+                        end: "{end time}"
+                        title: "{title name}"
+                        description: "{Description of the calendar event}"                        
                   cards:
                     - card:
                         title: '{label}'
@@ -228,6 +254,13 @@ paths:
                       latitude: '{latitude value}'
                       longitude: '{longitude value}'
                       postback: '{postback text}'
+                    - type: calendar
+                      postback: "{postback text}"
+                      text: Save to calendar
+                      start: "{start time}"
+                      end: "{end time}"
+                      title: "{title name}"
+                      description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
               Notification - Media:
                 value:
@@ -235,6 +268,9 @@ paths:
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
                   url: '{sample (image/video mp4) url starting with https://}'
+                  thumbnail_url: '{sample (image/video mp4) url starting with https://}'
+                  id: '{media id}'
+                  thumbnail_id: '{media id}'                  
                   extra: '{extra value}'
                   suggestions:
                     - type: '{label name}'
@@ -242,7 +278,49 @@ paths:
                       latitude: '{latitude value}'
                       longitude: '{longitude value}'
                       postback: '{postback text}'
+                    - type: calendar
+                      postback: "{postback text}"
+                      text: Save to calendar
+                      start: "{start time}"
+                      end: "{end time}"
+                      title: "{title name}"
+                      description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
+              Notification - Video With Thumbnail URL:
+                value:
+                  type: card
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  card:
+                    title: '{plain text}'
+                    description: '{description for card}'
+                    url: '{sample (image/video mp4) url starting with https://}'
+                    thumbnail_url: '{sample (image/video mp4) thumbnail url starting with https://}'                 
+                    suggestions:
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+              Notification - Video With Thumbnail ID:
+                value:
+                  type: card
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  card:
+                    title: '{plain text}'
+                    description: '{description for card}'
+                    id: '{sample (image/video mp4) media id}'
+                    thumbnail_id: '{sample (image/video mp4) thumbnail media id}'                 
+                    suggestions:
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+
               Notification - Rich Card Standalone:
                 value:
                   type: card
@@ -260,6 +338,13 @@ paths:
                         latitude: '{latitude value}'
                         longitude: '{longitude value}'
                         postback: '{postback text}'
+                      - type: calendar
+                        postback: "{postback text}"
+                        text: Save to calendar
+                        start: "{start time}"
+                        end: "{end time}"
+                        title: "{title name}"
+                        description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
               Notification - Rich Card Carousel:
                 value:
@@ -279,6 +364,13 @@ paths:
                           - type: message
                             text: '{text}'
                             postback: '{postback text}'
+                          - type: calendar
+                            postback: "{postback text}"
+                            text: Save to calendar
+                            start: "{start time}"
+                            end: "{end time}"
+                            title: "{title name}"
+                            description: "{Description of the calendar event}"
                     - card:
                         title: '{label}'
                         description: '{plain text}'
@@ -288,6 +380,7 @@ paths:
                             text: '{label}'
                             call_to: '{your number}'
                             postback: '{postback label}'
+
                     - card:
                         title: '{label}'
                         description: '{plain text}'
@@ -351,6 +444,45 @@ paths:
                       longitude: '{longitude value}'
                       postback: '{postback text}'
                   fallback_text: '{value {#var#} value}'
+              Notification - Calendar Suggestion:
+                value:
+                  type: text
+                  bot_name: '{bot name}'
+                  text: '{plain text}'
+                  phone_no: '{mobile number with country code}'
+                  suggestions:
+                  - type: calendar
+                    postback: '{postback text}'
+                    text: '{plain text}'
+                    start: '{start time}'
+                    end: '{end time}'
+                    title: '{label}'
+                    description: '{Description of the calendar event}'
+              Notification - Rich Card Carousel With IDS:
+                value:
+                  type: multiple_cards
+                  country_code: '+91'
+                  file_url: >-
+                    http://<Domain
+                    Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxxx.txt
+                  campaign_name: Testing bulk APIs
+                  scheduled_time: '2021-03-13 11:30:00'
+                  bot_name: '{RML agent name}'
+                  cards:
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        id: '{media id}'
+                        thumbnail_id: '{media id}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+
               India Template - Text:
                 value:
                   type: template
@@ -413,6 +545,13 @@ paths:
                     - type: dial
                       text: '{label}'
                       postback: '{postback label}'
+                    - type: calendar
+                      postback: "{postback text}"
+                      text: Save to calendar
+                      start: "{start time}"
+                      end: "{end time}"
+                      title: "{title name}"
+                      description: "{Description of the calendar event}"
                   card:
                     title: '{label}'
                     description: '{plain text}'
@@ -423,6 +562,13 @@ paths:
                         latitude: latitude value
                         longitude: longitude value
                         postback: '{postback text}'
+                      - type: calendar
+                        postback: "{postback text}"
+                        text: Save to calendar
+                        start: "{start time}"
+                        end: "{end time}"
+                        title: "{title name}"
+                        description: "{Description of the calendar event}"
                   cards:
                     - card:
                         title: '{label}'
@@ -466,6 +612,13 @@ paths:
                       latitude: '{latitude value}'
                       longitude: '{longitude value}'
                       postback: '{postback text}'
+                    - type: calendar
+                      postback: "{postback text}"
+                      text: Save to calendar
+                      start: "{start time}"
+                      end: "{end time}"
+                      title: "{title name}"
+                      description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
               Session - Media:
                 value:
@@ -474,13 +627,57 @@ paths:
                   bot_name: '{RML agent name}'
                   url: '{sample (image/video mp4) url starting with https://}'
                   extra: '{extra value}'
+                  thumbnail_url: '{sample (image/video mp4) url starting with https://}'
+                  id: '{media id}'
+                  thumbnail_id: '{media id}'                  
                   suggestions:
                     - type: '{label name}'
                       text: '{plain text}'
                       latitude: '{latitude value}'
                       longitude: '{longitude value}'
                       postback: '{postback text}'
+                    - type: calendar
+                      postback: "{postback text}"
+                      text: Save to calendar
+                      start: "{start time}"
+                      end: "{end time}"
+                      title: "{title name}"
+                      description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
+              Session - Video With Thumbnail URL:
+                value:
+                  type: card
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  card:
+                    title: '{plain text}'
+                    description: '{description for card}'
+                    url: '{sample (image/video mp4) url starting with https://}'
+                    thumbnail_url: '{sample (image/video mp4) thumbnail url starting with https://}'                 
+                    suggestions:
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+              Session - Video With Thumbnail ID:
+                value:
+                  type: card
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  card:
+                    title: '{plain text}'
+                    description: '{description for card}'
+                    id: '{sample (image/video mp4) media id}'
+                    thumbnail_id: '{sample (image/video mp4) thumbnail media id}'                 
+                    suggestions:
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
+                      - type: message
+                        postback: '{postback text}'
+                        text: '{plain text}'
               Session - Rich Card Standalone:
                 value:
                   type: card
@@ -498,6 +695,13 @@ paths:
                         latitude: '{latitude value}'
                         longitude: '{longitude value}'
                         postback: '{postback text}'
+                      - type: calendar
+                        postback: "{postback text}"
+                        text: Save to calendar
+                        start: "{start time}"
+                        end: "{end time}"
+                        title: "{title name}"
+                        description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
               Session - Rich Card Carousel:
                 value:
@@ -517,6 +721,13 @@ paths:
                           - type: message
                             text: '{text}'
                             postback: '{postback text}'
+                          - type: calendar
+                            postback: "{postback text}"
+                            text: Save to calendar
+                            start: "{start time}"
+                            end: "{end time}"
+                            title: "{title name}"
+                            description: "{Description of the calendar event}"
                     - card:
                         title: '{label}'
                         description: '{plain text}'
@@ -535,6 +746,13 @@ paths:
                             text: '{label}'
                             url: '{url with http://}'
                             postback: '{postback label}'
+                          - type: calendar
+                            postback: "{postback text}"
+                            text: Save to calendar
+                            start: "{start time}"
+                            end: "{end time}"
+                            title: "{title name}"
+                            description: "{Description of the calendar event}"
                   fallback_text: '{value {#var#} value}'
               Session - URL Suggestion:
                 value:
@@ -591,6 +809,51 @@ paths:
                       call_to: '{your number}'
                       postback: '{postback label}'
                   fallback_text: '{value {#var#} value}'
+              Session - Calendar Suggestion:
+                value:
+                  type: text
+                  bot_name: '{bot name}'
+                  text: '{plain text}'
+                  phone_no: '{mobile number with country code}'
+                  suggestions:
+                  - type: calendar
+                    postback: '{postback text}'
+                    text: '{plain text}'
+                    start: '{start time}'
+                    end: '{end time}'
+                    title: '{label}'
+                    description: '{Description of the calendar event}'
+              Session - Media ID:
+                value:
+                  type: media
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{bot name}'
+                  id: '{media id}'
+              Session - Rich Card Carousel With IDS:
+                value:
+                  type: multiple_cards
+                  country_code: '+91'
+                  file_url: >-
+                    http://<Domain
+                    Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxxx.txt
+                  campaign_name: Testing bulk APIs
+                  scheduled_time: '2021-03-13 11:30:00'
+                  bot_name: '{RML agent name}'
+                  cards:
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        id: '{media id}'
+                        thumbnail_id: '{media id}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+                    - card:
+                        title: '{label}'
+                        description: '{plain text}'
+                        url: '{sample (image/video mp4) url starting with https://}'
+
       responses:
         '202':
           description: Accepted
@@ -1423,6 +1686,503 @@ paths:
       servers:
         - url: https://apis.rmlconnect.net
         - url: '{client callback}'
+  /rcs/file_server/v2/uploadfile:
+    post:
+      tags:
+        - File Server API
+      summary: File Upload API
+      description: >-
+        File Upload API is used to upload files for a given called bot name which is usually supported for a file server. 
+      operationId: fileUploadRCS
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/rcs_upload_file_text_msg'
+            examples:
+              Form Data:
+                value:
+                  type: form-data
+                  file: '@/path/to/your/file'
+                  bot_name: '{RML agent name}'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message.
+                  file_id:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    file_id: {file id with alphanumerical values}
+                    message: File uploaded successfully
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors:
+                      text:
+                        - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
+  /rcs/management/v1/add_tester:
+    post:
+      tags:
+        - Management API
+      summary: Make a Tester
+      description: >-
+        Add Tester is a Management API used to add a bot for testing purpose for all RCS Components 
+      operationId: ManagementRCS
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/rcs_management_add_tester'
+            examples:
+              Form Data:
+                value:
+                  phone_no: '{phone_number}'
+                  bot_name: '{RML agent name}'
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The response message.
+                  status:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    response: Submitted, Tester Invite Sent
+                    status: status                  
+            application/xml:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                      status: string
+                      errors:
+                        text:
+                          - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The response of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    response: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
+  /rcs/management/v1/get_testers:
+    get:
+      tags:
+        - Management API
+      summary: List all Testers
+      description: >-
+        List all Testers is a Management API used to retrieve  all bot number for testing purpose for all RCS Components 
+      operationId: managementRCS
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The response message.
+                  status:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    response: Submitted, Tester Invite Sent
+                    status: status                  
+            application/xml:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                      status: string
+                      errors:
+                        text:
+                          - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: The response of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    response: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
+  /rcs/optins/v1/create_optin:
+    post:
+      tags:
+        - RCS Optin API
+      summary:  Create Optin API
+      description: >-
+        Create Optin API is used to create optin for a given called bot name which is usually supported along with channel. 
+      operationId: optinRCS
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+               $ref: '#/components/schemas/rcs_create_optin'
+            examples:
+              Create Optin:
+                value:
+                  mobile_number: "+917045345285"
+                  bot_name: Routemobile
+                  channel: third_party    
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message.
+                  file_id:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    file_id: {file id with alphanumerical values}
+                    message: File uploaded successfully
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors:
+                      text:
+                        - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
   /rcs/v1/mark_read:
     post:
       tags:
@@ -1710,6 +2470,7 @@ paths:
                 - $ref: '#/components/schemas/rcs_callback_incoming_document'
                 - $ref: '#/components/schemas/rcs_callback_status_read_delivered'
                 - $ref: '#/components/schemas/rcs_callback_status_failed'
+                - $ref: '#/components/schemas/rcs_callback_fallback_whatsapp'
             examples:
               Incoming Text:
                 value:
@@ -1822,6 +2583,17 @@ paths:
                   user_contact: +9170453xxxxx
                   extra: extra
                   username: demo
+              Fallback to Whatsapp:
+                value:
+                  bot_name: Routemobile
+                  event_type: status
+                  message_id: 66b3ef00-d14e-11ed-a253-0a58a9feac02
+                  message_status: fallback
+                  timestamp: '2023-04-02T12:03:43.655710Z'
+                  user_contact: "+917045345285"
+                  whatsapp_message_id: 11b3ef00-d14e-11ed-a253-0a58a9feac02
+                  extra: extra
+                  username: demo  
       responses:
         '200':
           description: OK
@@ -1947,6 +2719,15 @@ components:
               url:
                 type: string
                 description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
               latitude:
                 type: string
                 description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -2042,6 +2823,15 @@ components:
                         url:
                           type: string
                           description: The (image/video mp4) url starting with https:// .
+                        start:
+                          type: string
+                          description: "The latitude value associated with the suggestion.\r\n\r\n"
+                        end:
+                          type: string
+                          description: "The longitude value associated with the suggestion.\r\n\r\n"
+                        decription:
+                          type: string
+                          description: "The description associated with the suggestion.\r\n\r\n"
                 required:
                   - title
                   - description
@@ -2096,6 +2886,15 @@ components:
               postback:
                 type: string
                 description: The postback text or action associated with the suggestion.
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: >-
@@ -2126,6 +2925,15 @@ components:
         url:
           type: string
           description: "The URL of the media (image or video MP4) to be included in the message. This field is optional for \"media\" type messages.\r\n"
+        thumbnail_url:
+          type: string
+          description: The (image/video mp4) url starting with https:// .
+        id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+        thumbnail_id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
         extra:
           type: string
           description: "An extra value that can be included in the message. This field is optional.\r\n"
@@ -2159,6 +2967,116 @@ components:
             The fallback text that is displayed on devices. The fallback text to
             be sent if the RCS message cannot be delivered. This field supports
             variable substitution using {#var#} format. 
+      required:
+        - type
+        - phone_no
+        - bot_name
+    rcs_notification_videothumbnailurl_msg:
+      type: object
+      title: Notification - Video With Thumbnail URL 
+      description: >-
+        Messages that support sending media message with thumbnail url  to enhance visual communication and
+        short videos or animated content in MP4 format as part of a campaign.
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent. It can be \"media\".\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        card:
+          type: object
+          description: >-
+            An object representing a standalone rich card. It includes a
+            "title", "description", "url", and an array of "suggestions".
+            This field is optional for "card" type messages.
+          properties:
+            title:
+              type: string
+              description: The label name for the card.
+            description:
+              type: string
+              description: A short description of the card.
+            url:
+              type: string
+              description: The (image/video mp4) url starting with https:// .
+            thumbnail_url:
+              type: string
+              description: The (image/video mp4) url starting with https:// .
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"    
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+
+    rcs_notification_videothumbnailid_msg:
+      type: object
+      title: Notification - Video With Thumbnail ID
+      description: >-
+        Messages that support sending media message with thumbnail id  to enhance visual communication and
+        short videos or animated content in MP4 format as part of a campaign.
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent. It can be \"media\".\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        card:
+          type: object
+          description: >-
+            An object representing a standalone rich card. It includes a
+            "title", "description", "url", and an array of "suggestions".
+            This field is optional for "card" type messages.
+          properties:
+            title:
+              type: string
+              description: The label name for the card.
+            description:
+              type: string
+              description: A short description of the card.
+            id:
+              type: string
+              description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+            thumbnail_id:
+              type: string
+              description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"    
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
       required:
         - type
         - phone_no
@@ -2228,6 +3146,15 @@ components:
                     description: >-
                       The postback text or action associated with the
                       suggestion.
+                  start:
+                    type: string
+                    description: "The latitude value associated with the suggestion.\r\n\r\n"
+                  end:
+                    type: string
+                    description: "The longitude value associated with the suggestion.\r\n\r\n"
+                  decription:
+                    type: string
+                    description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: >-
@@ -2309,6 +3236,15 @@ components:
                         url:
                           type: string
                           description: The (image/video mp4) url starting with https://
+                        start:
+                          type: string
+                          description: "The latitude value associated with the suggestion.\r\n\r\n"
+                        end:
+                          type: string
+                          description: "The longitude value associated with the suggestion.\r\n\r\n"
+                        decription:
+                          type: string
+                          description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format.\r\n"
@@ -2518,6 +3454,134 @@ components:
         - phone_no
         - bot_name
         - text
+    rcs_notification_calendarsugg_msg:
+      type: object
+      title: Notification - Calendar Suggestion 
+      description: >-
+        Messages that provide suggested calendar  or prompts for users to
+        initiate a phone call directly from the messaging app as part of a
+        campaign. 
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent.\r\n\r\n"
+          example: Text. Media, Card, or Multiple Cards
+        phone_no:
+          type: string
+          description: The recipient's phone number, including the country code.
+        bot_name:
+          type: string
+          description: The name of the bot sending the message.
+        text:
+          type: string
+          description: >-
+            The plain text content of the message. This field is required for
+            "text" type messages.
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"
+              title:
+                type: string
+                description: "The plain title of the suggestion.\r\n\r\n"
+              url:
+                type: string
+                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
+    rcs_notification_mediaid_msg:
+      type: object
+      title: Notification - Media ID
+      description: >-
+        Messages that support sending media id to enhance visual communication and
+        short videos or animated content in MP4 format as part of a campaign.
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent. It can be \"media\".\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - id
+
+    rcs_notification_carslwithids_msg:
+      type: object
+      title: Notification - Rich Card Carousel With IDS
+      description: >-
+        A message type that consists of multiple cards presented in a carousel
+        format. Each card can have an image, title, description, and interactive
+        components like buttons or links. It CAn also have ids with thumbnail ids in addition for video and images. It provides a visually engaging way to
+        present multiple options or information to users.
+      properties:
+        type:
+          type: string
+          description: "The type of the message.\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        cards:
+          type: array
+          description: "An array of objects representing multiple rich cards. Each card object has a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"multiple_cards\" type messages.\r\n"
+          items:
+            type: object
+            properties:
+              card:
+                type: object
+                description: >-
+                  An object representing a standalone rich card. It includes a
+                  "title", "description", "url", and an array of "suggestions".
+                  This field is optional for "card" type messages.
+                properties:
+                  title:
+                    type: string
+                    description: The label name for the card.
+                  description:
+                    type: string
+                    description: A short description of the card.
+                  url:
+                    type: string
+                    description: The (image/video mp4) url starting with https:// .
+                  id:
+                    type: string
+                    description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+                  thumbnail_id:
+                    type: string
+                    description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name             
     rcs_session_common_msg:
       type: object
       title: Session - Common
@@ -2573,6 +3637,15 @@ components:
               postback:
                 type: string
                 description: "The postback text or action associated with the suggestion.\r\n\r\n"
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
         card:
           type: object
           description: "An object representing a standalone rich card. It includes a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"card\" type messages.\r\n\r\n"
@@ -2607,6 +3680,15 @@ components:
                   postback:
                     type: string
                     description: "The postback text or action associated with the suggestion.\r\n\r\n"
+                  start:
+                    type: string
+                    description: "The latitude value associated with the suggestion.\r\n\r\n"
+                  end:
+                    type: string
+                    description: "The longitude value associated with the suggestion.\r\n\r\n"
+                  decription:
+                    type: string
+                    description: "The description associated with the suggestion.\r\n\r\n"
           required:
             - title
             - description
@@ -2656,6 +3738,15 @@ components:
                         url:
                           type: string
                           description: The (image/video mp4) url starting with https:// .
+                        start:
+                          type: string
+                          description: "The latitude value associated with the suggestion.\r\n\r\n"
+                        end:
+                          type: string
+                          description: "The longitude value associated with the suggestion.\r\n\r\n"
+                        decription:
+                          type: string
+                          description: "The description associated with the suggestion.\r\n\r\n"
                 required:
                   - title
                   - description
@@ -2710,6 +3801,15 @@ components:
               postback:
                 type: string
                 description: The postback text or action associated with the suggestion.
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
@@ -2737,6 +3837,15 @@ components:
         url:
           type: string
           description: "The URL of the media (image or video MP4) to be included in the message. This field is optional for \"media\" type messages.\r\n"
+        thumbnail_url:
+          type: string
+          description: The (image/video mp4) url starting with https:// .
+        id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+        thumbnail_id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
         extra:
           type: string
           description: "An extra value that can be included in the message. This field is optional.\r\n"
@@ -2764,9 +3873,128 @@ components:
               postback:
                 type: string
                 description: The postback text or action associated with the suggestion.
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+    rcs_session_videothumbnailurl_msg:
+      type: object
+      title: Session - Video With Thumbnail URL 
+      description: >-
+        Messages that support sending media message with thumbnail url  to enhance visual communication and
+        short videos or animated content in MP4 format as part of a campaign.
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent. It can be \"media\".\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        card:
+          type: object
+          description: >-
+            An object representing a standalone rich card. It includes a
+            "title", "description", "url", and an array of "suggestions".
+            This field is optional for "card" type messages.
+          properties:
+            title:
+              type: string
+              description: The label name for the card.
+            description:
+              type: string
+              description: A short description of the card.
+            url:
+              type: string
+              description: The (image/video mp4) url starting with https:// .
+            thumbnail_url:
+              type: string
+              description: The (image/video mp4) url starting with https:// .
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"    
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+
+    rcs_session_videothumbnailid_msg:
+      type: object
+      title: Session - Video With Thumbnail ID
+      description: >-
+        Messages that support sending media message with thumbnail id  to enhance visual communication and
+        short videos or animated content in MP4 format as part of a campaign.
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent. It can be \"media\".\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        card:
+          type: object
+          description: >-
+            An object representing a standalone rich card. It includes a
+            "title", "description", "url", and an array of "suggestions".
+            This field is optional for "card" type messages.
+          properties:
+            title:
+              type: string
+              description: The label name for the card.
+            description:
+              type: string
+              description: A short description of the card.
+            id:
+              type: string
+              description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+            thumbnail_id:
+              type: string
+              description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"    
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
       required:
         - type
         - phone_no
@@ -2837,6 +4065,15 @@ components:
                     description: >-
                       The postback text or action associated with the
                       suggestion.
+                  start:
+                    type: string
+                    description: "The latitude value associated with the suggestion.\r\n\r\n"
+                  end:
+                    type: string
+                    description: "The longitude value associated with the suggestion.\r\n\r\n"
+                  decription:
+                    type: string
+                    description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
@@ -2916,6 +4153,15 @@ components:
                         url:
                           type: string
                           description: The (image/video mp4) url starting with https:// .
+                        start:
+                          type: string
+                          description: "The latitude value associated with the suggestion.\r\n\r\n"
+                        end:
+                          type: string
+                          description: "The longitude value associated with the suggestion.\r\n\r\n"
+                        decription:
+                          type: string
+                          description: "The description associated with the suggestion.\r\n\r\n"
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
@@ -3127,6 +4373,137 @@ components:
         - phone_no
         - bot_name
         - text
+    rcs_session_calendarsugg_msg:
+      type: object
+      title: Session - Calendar Suggestion 
+      description: >-
+        Messages that provide suggested calendar  or prompts for users to
+        initiate a phone call directly from the messaging app as part of a
+        campaign. 
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent.\r\n\r\n"
+          example: Text. Media, Card, or Multiple Cards
+        phone_no:
+          type: string
+          description: The recipient's phone number, including the country code.
+        bot_name:
+          type: string
+          description: The name of the bot sending the message.
+        text:
+          type: string
+          description: >-
+            The plain text content of the message. This field is required for
+            "text" type messages.
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"
+              title:
+                type: string
+                description: "The plain title of the suggestion.\r\n\r\n"
+              url:
+                type: string
+                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
+    rcs_session_mediaid_msg:
+      type: object
+      title: Session - Media ID
+      description: >-
+        Messages that support sending media id to enhance visual communication and
+        short videos or animated content in MP4 format as part of a campaign.
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent. It can be \"media\".\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+        thumbnail_id:
+          type: string
+          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - id
+
+    rcs_session_carslwithids_msg:
+      type: object
+      title: Session - Rich Card Carousel With IDs
+      description: >-
+        A message type that consists of multiple cards presented in a carousel
+        format. Each card can have an image, title, description, and interactive
+        components like buttons or links. It CAn also have ids with thumbnail ids in addition for video and images. It provides a visually engaging way to
+        present multiple options or information to users.
+      properties:
+        type:
+          type: string
+          description: "The type of the message.\r\n"
+        phone_no:
+          type: string
+          description: "The recipient's phone number, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        cards:
+          type: array
+          description: "An array of objects representing multiple rich cards. Each card object has a \"title\", \"description\", \"url\", and an array of \"suggestions\". This field is optional for \"multiple_cards\" type messages.\r\n"
+          items:
+            type: object
+            properties:
+              card:
+                type: object
+                description: >-
+                  An object representing a standalone rich card. It includes a
+                  "title", "description", "url", and an array of "suggestions".
+                  This field is optional for "card" type messages.
+                properties:
+                  title:
+                    type: string
+                    description: The label name for the card.
+                  description:
+                    type: string
+                    description: A short description of the card.
+                  url:
+                    type: string
+                    description: The (image/video mp4) url starting with https:// .
+                  id:
+                    type: string
+                    description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+                  thumbnail_id:
+                    type: string
+                    description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name              
     rcs_template_text_msg:
       type: object
       title: India Template API
@@ -3372,7 +4749,7 @@ components:
         - file_url
         - campaign_name
         - bot_name
-        - url
+        - url  
     rcs_bulkcamp_richcardcarsl_msg:
       type: object
       title: Rich Card Carousel
@@ -4701,3 +6078,87 @@ components:
         - user_contact
         - extra
         - username
+    rcs_callback_fallback_whatsapp:
+      type: object
+      title: Fallback To Whatsapp
+      properties:
+        bot_name:
+          type: string
+          description: "The name of the bot.\r\n"
+        event_type:
+          type: string
+          description: "The type of event or message. \r\n"
+        message_id:
+          type: string
+          description: "The unique identifier for the message that is being reported for its status. \r\n"
+        message_status:
+          type: string
+          description: "The status of the message.\r\n"
+        timestamp:
+          type: string
+          description: "The timestamp of when the message was received or sent.\r\n"
+        user_contact:
+          type: string
+          description: "The contact information of the user.\r\n"
+        extra:
+          type: string
+          description: "Additional information or parameters related to the payment.\r\n"
+        username:
+          type: string
+          description: "The name of the user.\r\n"
+      required:
+        - bot_name
+        - event_type
+        - message_id
+        - message_status
+        - failure_reason
+        - timestamp
+        - user_contact
+        - extra
+        - username
+    rcs_upload_file_text_msg:
+      type: object
+      title: File Upload API
+      properties:
+        bot_name:
+          type: string
+          description: "The name of the bot.\r\n"
+        file:
+          type: string
+          description: "The path of the file to be uploaded. \r\n"
+      required:
+        - bot_name
+        - file
+    rcs_management_add_tester:
+      type: object
+      title: Management Add Tester API
+      properties:
+        
+        bot_name:
+          type: string
+          description: "The name of the bot.\r\n"
+        phone_number:
+          type: string
+          description: "The phone number of the bot. \r\n"
+      required:
+        - bot_name
+        - file
+    rcs_create_optin:
+      type: object
+      title: Create Optin  API
+      properties:
+        
+        bot_name:
+          type: string
+          description: "The name of the bot.\r\n"
+        mobile_number:
+          type: string
+          description: "The mobile number of the bot. \r\n"
+        channel:
+          type: string
+          description: "The channel of the bot. \r\n"
+
+      required:
+        - bot_name
+        - mobile_number
+        - channel
