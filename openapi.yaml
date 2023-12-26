@@ -174,7 +174,7 @@ paths:
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
                   text: '{plain text}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   suggestions:
                     - type: '{label name}'
@@ -197,7 +197,7 @@ paths:
                   card:
                     title: '{label}'
                     description: '{plain text}'
-                    url: '{sample (image/video mp4) url starting with https://}'
+                    url: '{sample (image/pdf/video mp4) url starting with https://}'
                     suggestions:
                       - type: '{label name}'
                         text: '{plain text}'
@@ -215,7 +215,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: message
                             text: '{text}'
@@ -226,7 +226,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: dial
                             text: '{label}'
@@ -235,7 +235,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: url
                             text: '{label}'
@@ -267,8 +267,8 @@ paths:
                   type: media
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
-                  thumbnail_url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
+                  thumbnail_url: '{sample (image/pdf/video mp4) url starting with https://}'
                   id: '{media id}'
                   thumbnail_id: '{media id}'                  
                   extra: '{extra value}'
@@ -326,12 +326,12 @@ paths:
                   type: card
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   card:
                     title: '{label}'
                     description: '{plain text}'
-                    url: '{sample (image/video mp4) url starting with https://}'
+                    url: '{sample (image/pdf/video mp4) url starting with https://}'
                     suggestions:
                       - type: '{label name}'
                         text: '{plain text}'
@@ -356,7 +356,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: message
                             text: '{text}'
@@ -374,7 +374,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: dial
                             text: '{label}'
@@ -384,7 +384,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: url
                             text: '{label}'
@@ -396,7 +396,7 @@ paths:
                   type: media
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   suggestions:
                     - type: url
                       text: '{label}'
@@ -422,7 +422,7 @@ paths:
                   type: media
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   suggestions:
                     - type: dial
@@ -477,11 +477,11 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
 
               India Template - Text:
                 value:
@@ -532,7 +532,7 @@ paths:
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
                   text: '{plain text}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   suggestions:
                     - type: '{label name}'
@@ -555,7 +555,7 @@ paths:
                   card:
                     title: '{label}'
                     description: '{plain text}'
-                    url: '{sample (image/video mp4) url starting with https://}'
+                    url: '{sample (image/pdf/video mp4) url starting with https://}'
                     suggestions:
                       - type: '{label name}'
                         text: '{plain text}'
@@ -573,7 +573,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: message
                             text: '{text}'
@@ -584,7 +584,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: dial
                             text: '{label}'
@@ -593,7 +593,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: url
                             text: '{label}'
@@ -625,9 +625,9 @@ paths:
                   type: media
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
-                  thumbnail_url: '{sample (image/video mp4) url starting with https://}'
+                  thumbnail_url: '{sample (image/pdf/video mp4) url starting with https://}'
                   id: '{media id}'
                   thumbnail_id: '{media id}'                  
                   suggestions:
@@ -683,12 +683,12 @@ paths:
                   type: card
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   card:
                     title: '{label}'
                     description: '{plain text}'
-                    url: '{sample (image/video mp4) url starting with https://}'
+                    url: '{sample (image/pdf/video mp4) url starting with https://}'
                     suggestions:
                       - type: '{label name}'
                         text: '{plain text}'
@@ -713,7 +713,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: message
                             text: '{text}'
@@ -731,7 +731,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: dial
                             text: '{label}'
@@ -740,7 +740,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: url
                             text: '{label}'
@@ -759,7 +759,7 @@ paths:
                   type: media
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   suggestions:
                     - type: url
@@ -801,7 +801,7 @@ paths:
                   type: media
                   phone_no: '{mobile number with country code}'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   extra: '{extra value}'
                   suggestions:
                     - type: dial
@@ -848,11 +848,12 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/
+                        video mp4) url starting with https://}'
 
       responses:
         '202':
@@ -988,6 +989,7 @@ paths:
                 - $ref: '#/components/schemas/rcs_bulkcamp_textsugg_msg'
                 - $ref: '#/components/schemas/rcs_bulkcamp_dialsugg_msg'
                 - $ref: '#/components/schemas/rcs_bulkcamp_locsugg_msg'
+                - $ref: '#/components/schemas/rcs_bulkcamp_calendarsugg_msg'
             examples:
               Text:
                 value:
@@ -1017,7 +1019,7 @@ paths:
                   campaign_name: Testing bulk APIs
                   scheduled_time: '2021-03-13 11:30:00'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   suggestions:
                     - type: '{label name}'
                       text: '{plain text}'
@@ -1035,11 +1037,11 @@ paths:
                   campaign_name: Testing bulk APIs
                   scheduled_time: '2021-03-13 11:30:00'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   card:
                     title: '{label}'
                     description: '{plain text}'
-                    url: '{sample (image/video mp4) url starting with https://}'
+                    url: '{sample (image/pdf/video mp4) url starting with https://}'
                     suggestions:
                       - type: '{label name}'
                         text: '{plain text}'
@@ -1061,7 +1063,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: message
                             text: '{text}'
@@ -1072,7 +1074,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: dial
                             text: '{label}'
@@ -1081,7 +1083,7 @@ paths:
                     - card:
                         title: '{label}'
                         description: '{plain text}'
-                        url: '{sample (image/video mp4) url starting with https://}'
+                        url: '{sample (image/pdf/video mp4) url starting with https://}'
                         suggestions:
                           - type: url
                             text: '{label}'
@@ -1098,7 +1100,7 @@ paths:
                   campaign_name: Testing bulk APIs
                   scheduled_time: '2021-03-13 11:30:00'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   suggestions:
                     - type: url
                       text: '{label}'
@@ -1134,7 +1136,7 @@ paths:
                   campaign_name: Testing bulk APIs
                   scheduled_time: '2021-03-13 11:30:00'
                   bot_name: '{RML agent name}'
-                  url: '{sample (image/video mp4) url starting with https://}'
+                  url: '{sample (image/pdf/video mp4) url starting with https://}'
                   suggestions:
                     - type: dial
                       text: '{label}'
@@ -1159,6 +1161,25 @@ paths:
                       longitude: '{longitude value}'
                       postback: '{postback text}'
                   fallback_text: '{value {#var#} value}'
+              Calendar Suggestion:
+                value:
+                  type: text
+                  country_code: "+91"
+                  file_url: http://<Domain Name>/v1/download/Misc/e260e874-831c-11eb-af5c-0242ac12xxxx.txt
+                  campaign_name: Testing bulk APIs
+                  scheduled_time: '2021-03-13 11:30:00'
+                  bot_name: "{RML agent name}"
+                  text: "{plain text}"
+                  suggestions:
+                  - type: calendar
+                    postback: '{postback text}'
+                    text: '{plain text}'
+                    start: '{start time}'
+                    end: '{end time}'
+                    title: '{label}'
+                    description: '{Description of the calendar event}'
+                  fallback_text: "{value {#var#} value}"
+
       responses:
         '202':
           description: Accepted
@@ -2718,7 +2739,7 @@ components:
                 description: "The plain text content of the suggestion.\r\n\r\n"
               url:
                 type: string
-                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+                description: "The (image/pdf/video mp4) url starting with https:// .\r\n\r\n"
               start:
                 type: string
                 description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -2752,7 +2773,7 @@ components:
               description: "A short description of the card.\r\n\r\n"
             url:
               type: string
-              description: The (image/video mp4) url starting with https:// .
+              description: The (image/pdf/video mp4) url starting with https:// .
             suggestions:
               type: array
               description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
@@ -2796,7 +2817,7 @@ components:
                     description: "A short description of the card.\r\n\r\n"
                   url:
                     type: string
-                    description: The (image/video mp4) url starting with https:// .
+                    description: The (image/pdf/video mp4) url starting with https:// .
                   suggestions:
                     type: array
                     description: >-
@@ -2822,7 +2843,7 @@ components:
                           description: "The sender phone number.\r\n\r\n"
                         url:
                           type: string
-                          description: The (image/video mp4) url starting with https:// .
+                          description: The (image/pdf/video mp4) url starting with https:// .
                         start:
                           type: string
                           description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -2924,16 +2945,16 @@ components:
           description: "The name of the bot sending the message.\r\n"
         url:
           type: string
-          description: "The URL of the media (image or video MP4) to be included in the message. This field is optional for \"media\" type messages.\r\n"
+          description: "The URL of the media (image or pdf or video MP4) to be included in the message. This field is optional for \"media\" type messages.\r\n"
         thumbnail_url:
           type: string
-          description: The (image/video mp4) url starting with https:// .
+          description: The (image/pdf/video mp4) url starting with https:// .
         id:
           type: string
           description: "The id of the media (image or video MP4) to be included in the message.\r\n"
         thumbnail_id:
           type: string
-          description: "The id of the media (image or video MP4) to be included in the message.\r\n"
+          description: "The id of the media (image or pdf orvideo MP4) to be included in the message.\r\n"
         extra:
           type: string
           description: "An extra value that can be included in the message. This field is optional.\r\n"
@@ -3119,7 +3140,7 @@ components:
               description: A short description of the card.
             url:
               type: string
-              description: The (image/video mp4) url starting with https://
+              description: The (image/pdf/video mp4) url starting with https://
             suggestions:
               type: array
               description: >-
@@ -3209,7 +3230,7 @@ components:
                     description: A short description of the card.
                   url:
                     type: string
-                    description: "The (image/video mp4) url starting with https://\r\n"
+                    description: "The (image/pdf/video mp4) url starting with https://\r\n"
                   suggestions:
                     type: array
                     description: >-
@@ -3235,7 +3256,7 @@ components:
                           description: The sender phone number.
                         url:
                           type: string
-                          description: The (image/video mp4) url starting with https://
+                          description: The (image/pdf/video mp4) url starting with https://
                         start:
                           type: string
                           description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -3288,7 +3309,7 @@ components:
                 description: The plain text content of the suggestion.
               url:
                 type: string
-                description: The (image/video mp4) url starting with https:// .
+                description: The (image/pdf/video mp4) url starting with https:// .
               postback:
                 type: string
                 description: The postback text or action associated with the suggestion.
@@ -3494,7 +3515,7 @@ components:
                 description: "The plain title of the suggestion.\r\n\r\n"
               url:
                 type: string
-                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+                description: "The (image/pdf/video mp4) url starting with https:// .\r\n\r\n"
               start:
                 type: string
                 description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -3571,7 +3592,7 @@ components:
                     description: A short description of the card.
                   url:
                     type: string
-                    description: The (image/video mp4) url starting with https:// .
+                    description: The (image/pdf/video mp4) url starting with https:// .
                   id:
                     type: string
                     description: "The id of the media (image or video MP4) to be included in the message.\r\n"
@@ -3624,7 +3645,7 @@ components:
                 description: "The plain text content of the suggestion.\r\n\r\n"
               url:
                 type: string
-                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+                description: "The (image/pdf/video mp4) url starting with https:// .\r\n\r\n"
               latitude:
                 type: string
                 description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -3658,7 +3679,7 @@ components:
               description: "A short description of the card.\r\n\r\n"
             url:
               type: string
-              description: The (image/video mp4) url starting with https:// .
+              description: The (image/pdf/video mp4) url starting with https:// .
             suggestions:
               type: array
               description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
@@ -3711,7 +3732,7 @@ components:
                     description: "A short description of the card.\r\n\r\n"
                   url:
                     type: string
-                    description: The (image/video mp4) url starting with https:// .
+                    description: The (image/pdf/video mp4) url starting with https:// .
                   suggestions:
                     type: array
                     description: >-
@@ -3737,7 +3758,7 @@ components:
                           description: "The sender phone number.\r\n\r\n"
                         url:
                           type: string
-                          description: The (image/video mp4) url starting with https:// .
+                          description: The (image/pdf/video mp4) url starting with https:// .
                         start:
                           type: string
                           description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -3839,7 +3860,7 @@ components:
           description: "The URL of the media (image or video MP4) to be included in the message. This field is optional for \"media\" type messages.\r\n"
         thumbnail_url:
           type: string
-          description: The (image/video mp4) url starting with https:// .
+          description: The (image/pdf/video mp4) url starting with https:// .
         id:
           type: string
           description: "The id of the media (image or video MP4) to be included in the message.\r\n"
@@ -4038,7 +4059,7 @@ components:
               description: A short description of the card.
             url:
               type: string
-              description: The (image/video mp4) url starting with https:// .
+              description: The (image/pdf/video mp4) url starting with https:// .
             suggestions:
               type: array
               description: >-
@@ -4126,7 +4147,7 @@ components:
                     description: A short description of the card.
                   url:
                     type: string
-                    description: The (image/video mp4) url starting with https:// .
+                    description: The (image/pdf/video mp4) url starting with https:// .
                   suggestions:
                     type: array
                     description: >-
@@ -4152,7 +4173,7 @@ components:
                           description: The sender phone number.
                         url:
                           type: string
-                          description: The (image/video mp4) url starting with https:// .
+                          description: The (image/pdf/video mp4) url starting with https:// .
                         start:
                           type: string
                           description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -4208,7 +4229,7 @@ components:
                 description: The plain text content of the suggestion.
               url:
                 type: string
-                description: The (image/video mp4) url starting with https:// .
+                description: The (image/pdf/video mp4) url starting with https:// .
               postback:
                 type: string
                 description: The postback text or action associated with the suggestion.
@@ -4413,7 +4434,7 @@ components:
                 description: "The plain title of the suggestion.\r\n\r\n"
               url:
                 type: string
-                description: "The (image/video mp4) url starting with https:// .\r\n\r\n"
+                description: "The (image/pdf/video mp4) url starting with https:// .\r\n\r\n"
               start:
                 type: string
                 description: "The latitude value associated with the suggestion.\r\n\r\n"
@@ -4493,7 +4514,7 @@ components:
                     description: A short description of the card.
                   url:
                     type: string
-                    description: The (image/video mp4) url starting with https:// .
+                    description: The (image/pdf/video mp4) url starting with https:// .
                   id:
                     type: string
                     description: "The id of the media (image or video MP4) to be included in the message.\r\n"
@@ -4714,7 +4735,7 @@ components:
               description: A short description of the card.
             url:
               type: string
-              description: The (image/video mp4) url starting with https:// .
+              description: The (image/pdf/video mp4) url starting with https:// .
             suggestions:
               type: array
               description: >-
@@ -4798,7 +4819,7 @@ components:
                     description: A short description of the card.
                   url:
                     type: string
-                    description: The (image/video mp4) url starting with https:// .
+                    description: The (image/pdf/video mp4) url starting with https:// .
                   suggestions:
                     type: array
                     description: >-
@@ -4824,7 +4845,7 @@ components:
                           description: The sender phone number.
                         url:
                           type: string
-                          description: The (image/video mp4) url starting with https:// .
+                          description: The (image/pdf/video mp4) url starting with https:// .
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
@@ -4881,7 +4902,7 @@ components:
                 description: The plain text content of the suggestion.
               url:
                 type: string
-                description: The (image/video mp4) url starting with https:// .
+                description: The (image/pdf/video mp4) url starting with https:// .
               postback:
                 type: string
                 description: The postback text or action associated with the suggestion.
@@ -5059,6 +5080,55 @@ components:
         - campaign_name
         - bot_name
         - text
+    rcs_bulkcamp_calendarsugg_msg:
+      type: object
+      title: Calendar Suggestion 
+      properties:
+        type:
+          type: string
+          description: "The type of message to be sent.\r\n\r\n"
+          example: Text. Media, Card, or Multiple Cards
+        phone_no:
+          type: string
+          description: The recipient's phone number, including the country code.
+        bot_name:
+          type: string
+          description: The name of the bot sending the message.
+        text:
+          type: string
+          description: >-
+            The plain text content of the message. This field is required for
+            "text" type messages.
+        suggestions:
+          type: array
+          description: "An array of suggestions shown as actions for the endpoint. Each suggestion can have a \"text\" field with plain text content. This field is optional.\r\n\r\n"
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: "The label name for the suggestion.\r\n\r\n"
+              text:
+                type: string
+                description: "The plain text content of the suggestion.\r\n\r\n"
+              title:
+                type: string
+                description: "The plain title of the suggestion.\r\n\r\n"
+              url:
+                type: string
+                description: "The (image/pdf/video mp4) url starting with https:// .\r\n\r\n"
+              start:
+                type: string
+                description: "The latitude value associated with the suggestion.\r\n\r\n"
+              end:
+                type: string
+                description: "The longitude value associated with the suggestion.\r\n\r\n"
+              decription:
+                type: string
+                description: "The description associated with the suggestion.\r\n\r\n"
+              postback:
+                type: string
+                description: "The postback text or action associated with the suggestion.\r\n\r\n"
     rcs_payments_india_template:
       type: object
       title: India Template
