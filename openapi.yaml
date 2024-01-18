@@ -165,8 +165,16 @@ paths:
                     - $ref: '#/components/schemas/rcs_session_calendarsugg_msg'
                     - $ref: '#/components/schemas/rcs_session_mediaid_msg' 
                     - $ref: '#/components/schemas/rcs_session_carslwithids_msg'                                  
+                - title: India Template Message APIs
+                  oneOf:
+                    - $ref: '#/components/schemas/rcs_template_text_msg'
+                    - $ref: '#/components/schemas/rcs_template_richcrdstdalone_msg'
+                    - $ref: '#/components/schemas/rcs_template_richcrdcarousel_msg'
+                    - $ref: '#/components/schemas/rcs_template_fallback_api_msg' 
+                    - $ref: '#/components/schemas/rcs_template_whatsapp_fallback_api_msg'
+                    - $ref: '#/components/schemas/rcs_template_sms_fallback_api_msg'
 
-                - $ref: '#/components/schemas/rcs_template_text_msg'
+
             examples:
               Notification - Common:
                 value:
@@ -526,6 +534,32 @@ paths:
                   bot_name: Routemobile
                   text: Hi
                   fallback_text: Your test OTP is {#var#}- 29 Three
+              India Template - Whatsapp Fallback API:
+                value:
+                  type: template
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  extra: '{extra value}'
+                  template:
+                    name: '{template name}'
+                  fallback_channel: whatsapp
+                  whatsapp:
+                    media:
+                      type: '{media type/template}'
+                      template_name: '{template name}'
+                      lang_code: '{language code}'
+              India Template - SMS Fallback API:
+                value:
+                  type: template
+                  phone_no: '{mobile number with country code}'
+                  bot_name: '{RML agent name}'
+                  extra: '{extra value}'
+                  template:
+                    name: '{template name}'
+                  fallback_channel: sms
+                  sms:
+                    fallback_text: '{fallback text}'
+
               Session - Common:
                 value:
                   type: text/media/card/multiple_cards
@@ -1289,6 +1323,7 @@ paths:
       servers:
         - url: https://apis.rmlconnect.net
         - url: '{client callback}'
+
   /payments/v1/send_bill:
     post:
       tags:
@@ -2621,6 +2656,542 @@ paths:
       servers:
         - url: https://apis.rmlconnect.net
         - url: '{client callback}'
+  /rcs-template-apis/api/v1/template/template:
+    post:
+      tags:
+        - RCS Template API
+      summary: Create Template APi
+      description: >-
+        RCS Create Template APIs allows businesses to create existing templates created by using RML Panel which can be used 
+        efficiently send personalized and interactive messages to their
+        customers at scale.
+      operationId: createTemplateRCS
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/rcs_create_template_text'
+                - $ref: '#/components/schemas/rcs_create_template_richcard'
+                - $ref: '#/components/schemas/rcs_create_template_carousel'
+            examples:
+              Text:
+                value:
+                  name: '{template name}'
+                  type: '{template type}'
+                  textMessageContent: '{template content for text message template}'
+                  suggestions: []
+                  templateDetails:
+                    username: '{username of account}'
+                    bot_name: '{RML Agent Name}'
+                    variables: []
+                    category: text
+                    system_ip: '{system ip}'
+                    payload: {}
+
+              Rich Card Standalone:
+                value:
+                  name: '{template name}'
+                  type: '{template type}'
+                  orientation: '{orientation of template}'
+                  height: '{height of template}'
+                  standAlone:
+                    cardTitle: '{rich card title}'
+                    cardDescription: '{rich card description}'
+                    fileName: '{file name}'
+                    thumbnailFileName: '{thumbnail file name}'
+                    suggestions:
+                    - suggestionType: '{suggestion type}'
+                      displayText: '{display text}'
+                      postback: '{postback text}'
+                  templateDetails:
+                    username: '{user name}'
+                    bot_name: '{RML Agent Name}'
+                    variables: []
+                    category: rich_card
+                    system_ip: '{system ip}'
+                    payload: {}
+              Rich Card Carousel:
+                value:
+                    name: '{template name}'
+                    type: '{template type}'
+                    height: '{height of template}'
+                    width: '{width of template}'
+                    carouselList:
+                    - cardTitle: '{title of card in carouselList}'
+                      cardDescription: '{description of card in carouselList}'
+                      fileName: '{fileName of card in carouselList}'
+                      suggestions:
+                      - suggestionType: url_action
+                        url: xxxxxx://xxxxxxxxxx.xx/
+                        displayText: '{display text}'
+                        postback: '{postback text}'
+                    - cardTitle: Step into the limelight!
+                      cardDescription: Choose from new arrival sunglasses.
+                      fileName: '{file name of image of card in carouselList}'
+                      thumbnailFileName: '{thumbnail file name of image of card in carouselList}'
+                      suggestions:
+                      - suggestionType: url_action
+                        url: xxxxxx://xxxxxxxxxx.xx/
+                        displayText: '{display text}'
+                        postback: '{postback text}'
+                    templateDetails:
+                      username: '{user name}'
+                      bot_name: '{RML Agent Name}'
+                      variables: []
+                      category: carousel
+                      system_ip: '{system ip}'
+                      payload: {}
+    put:
+      tags:
+        - RCS Template API
+      summary: Update Template APi
+      description: >-
+        RCS Update Template APIs  allows businesses to update existing templates created by using RML Panel which can be used 
+        efficiently send personalized and interactive messages to their
+        customers at scale. 
+      operationId: updateTemplateRCS
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/rcs_update_template_text'
+                - $ref: '#/components/schemas/rcs_update_template_richcard'
+                - $ref: '#/components/schemas/rcs_update_template_carousel'
+            examples:
+              Text:
+                value:
+                  name: '{template name}'
+                  type: '{template type}'
+                  textMessageContent: '{template content for text message template}'
+                  suggestions: []
+                  templateDetails:
+                    username: '{username of account}'
+                    bot_name: '{RML Agent Name}'
+                    variables: []
+                    category: text
+                    system_ip: '{system ip}'
+                    payload: {}
+
+              Rich Card Standalone:
+                value:
+                  name: '{template name}'
+                  type: '{template type}'
+                  orientation: '{orientation of template}'
+                  height: '{height of template}'
+                  standAlone:
+                    cardTitle: '{rich card title}'
+                    cardDescription: '{rich card description}'
+                    fileName: '{file name}'
+                    thumbnailFileName: '{thumbnail file name}'
+                    suggestions:
+                    - suggestionType: '{suggestion type}'
+                      displayText: '{display text}'
+                      postback: '{postback text}'
+                  templateDetails:
+                    username: '{user name}'
+                    bot_name: '{RML Agent Name}'
+                    variables: []
+                    category: rich_card
+                    system_ip: '{system ip}'
+                    payload: {}
+              Rich Card Carousel:
+                value:
+                    name: '{template name}'
+                    type: '{template type}'
+                    height: '{height of template}'
+                    width: '{width of template}'
+                    carouselList:
+                    - cardTitle: '{title of card in carouselList}'
+                      cardDescription: '{description of card in carouselList}'
+                      fileName: '{fileName of card in carouselList}'
+                      suggestions:
+                      - suggestionType: url_action
+                        url: xxxxxx://xxxxxxxxxx.xx/
+                        displayText: '{display text}'
+                        postback: '{postback text}'
+                    - cardTitle: Step into the limelight!
+                      cardDescription: Choose from new arrival sunglasses.
+                      fileName: '{file name of image of card in carouselList}'
+                      thumbnailFileName: '{thumbnail file name of image of card in carouselList}'
+                      suggestions:
+                      - suggestionType: url_action
+                        url: xxxxxx://xxxxxxxxxx.xx/
+                        displayText: '{display text}'
+                        postback: '{postback text}'
+                    templateDetails:
+                      username: '{user name}'
+                      bot_name: '{RML Agent Name}'
+                      variables: []
+                      category: carousel
+                      system_ip: '{system ip}'
+                      payload: {}
+    get:
+      tags:
+        - RCS Template API
+      summary: Get Template API
+      description: >-
+        RCS Get Template API is used to retrieve TEMPLATE specified when category,name,bot_name, user_name, template_id, page_no and limit are mentioned to locate the template for testing purpose for all RCS Components 
+      operationId: getTemplateRCS
+    delete:
+      tags:
+        - RCS Template API
+      summary: Delete Template API
+      description: >-
+        RCS Delete Template API is used to delete TEMPLATE specified when name and bot_name are mentioned to locate the template for testing purpose for all RCS Components 
+      operationId: deleteTemplateRCS
+
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message.
+                  campaign_id:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    message: Message request has been created
+                    campaign_id: 1xx
+            application/xml:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors:
+                      text:
+                        - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
+  /rcs-template-apis/api/v1/template//template:
+    get:
+      tags:
+        - RCS Template API
+      summary: Get Template  Status APi
+      description: >-
+        RCS Get Template Status API allows businesses to get existing templates created by using RML Panel using parameters templateName and bot_name  which can be used 
+        efficiently send personalized and interactive messages to their
+        customers at scale.
+      operationId: getTemplateStatusRCS
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message.
+                  campaign_id:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    message: Message request has been created
+                    campaign_id: 1xx
+            application/xml:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors:
+                      text:
+                        - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
+
+  /rcs-template-apis/api/v1//template//template:
+    get:
+      tags:
+        - RCS Template API
+      summary: Get Single Template APi
+      description: >-
+        RCS Get Single Template API allows businesses to get one of existing templates created by using RML Panel using parameters name and bot_name  which can be used 
+        efficiently send personalized and interactive messages to their
+        customers at scale.
+      operationId: getSingleTemplateRCS
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The response message.
+                  campaign_id:
+                    type: string
+                    description: The unique ID of the campaign.
+              examples:
+                Example 1:
+                  value:
+                    message: Message request has been created
+                    campaign_id: 1xx
+            application/xml:
+              schema:
+                type: object
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: object
+                    description: "The error for not processing the request.\r\n\r\n"
+                    properties:
+                      text:
+                        type: array
+                        description: The error description.
+                        items:
+                          type: string
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors:
+                      text:
+                        - string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+              examples:
+                Example 1:
+                  value:
+                    status: string
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: The message response.
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: The status of the message delivery.
+                  errors:
+                    type: string
+                    description: "The error for not processing the request.\r\n\r\n"
+              examples:
+                Example 1:
+                  value:
+                    status: string
+                    errors: string
+      security:
+        - jwt: []
+      servers:
+        - url: https://apis.rmlconnect.net
+        - url: '{client callback}'
 tags:
   - name: Login
   - name: RCS Messages API
@@ -2929,7 +3500,7 @@ components:
         - text
     rcs_notification_media_imagemp4_msg:
       type: object
-      title: Notification - Media Image or Video MP4
+      title: Notification - Media (Image/Video/pdf) image.png
       description: >-
         Messages that include images to enhance visual communication and short
         videos, or animated content in MP4 format.
@@ -3841,7 +4412,7 @@ components:
         - text
     rcs_session_mediaimagemp4_msg:
       type: object
-      title: Session - Media Image or Video MP4
+      title: Notification - Media (Image/Video/pdf) image.png
       description: >-
         Messages that support sending images to enhance visual communication and
         short videos or animated content in MP4 format as part of a campaign.
@@ -4527,7 +5098,7 @@ components:
         - bot_name              
     rcs_template_text_msg:
       type: object
-      title: India Template API
+      title: India Template - Text Message
       description: >-
         RCS template APIs allow businesses to leverage the advanced features of
         RCS messaging and create compelling, interactive, and visually rich
@@ -4568,6 +5139,273 @@ components:
         fallback_text:
           type: string
           description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - template
+    rcs_template_richcrdstdalone_msg:
+      type: object
+      title: India Template - Rich Card Standalone Message
+      description: >-
+        RCS template APIs allow businesses to leverage the advanced features of
+        RCS messaging and create compelling, interactive, and visually rich
+        content to engage with their customers more dynamically and
+        interactively.
+      properties:
+        type:
+          type: string
+          description: "The type of the template.\r\n\r\n- **Text:** RCS text templates provide a way to create engaging and interactive messaging experiences for businesses. \r\n- **Rich Card Standalone:** Rich Card Standalone utilizes the Rich Card format to provide visually rich and interactive content. \r\n- **Rich Card Carousel:** A Rich Card Carousel in RCS allows businesses to present multiple rich media cards in a single message, providing a visually engaging and interactive experience.\r\n"
+        phone_no:
+          type: string
+          description: "The mobile number to which the message will be sent, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        extra:
+          type: string
+          description: "An extra value that can be included in the message. This field is optional.\r\n"
+        template:
+          type: object
+          description: "An object containing the template information.\r\n"
+          properties:
+            name:
+              type: string
+              description: "The name or identifier of the text template you want to use.\r\n"
+            variables:
+              type: object
+              description: "An object containing the variables to be replaced in the template.\r\n"
+              properties:
+                '{var1}':
+                  type: string
+                  description: "The value to replace the \"{var1}\" variable in the template.\r\n"
+                '{var2}':
+                  type: string
+                  description: "The value to replace the \"{var2}\" variable in the template.\r\n"
+          required:
+            - name
+        fallback_text:
+          type: string
+          description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - template
+
+    rcs_template_richcrdcarousel_msg:
+      type: object
+      title: India Template - Rich Card Carousel Message
+      description: >-
+        RCS template APIs allow businesses to leverage the advanced features of
+        RCS messaging and create compelling, interactive, and visually rich
+        content to engage with their customers more dynamically and
+        interactively.
+      properties:
+        type:
+          type: string
+          description: "The type of the template.\r\n\r\n- **Text:** RCS text templates provide a way to create engaging and interactive messaging experiences for businesses. \r\n- **Rich Card Standalone:** Rich Card Standalone utilizes the Rich Card format to provide visually rich and interactive content. \r\n- **Rich Card Carousel:** A Rich Card Carousel in RCS allows businesses to present multiple rich media cards in a single message, providing a visually engaging and interactive experience.\r\n"
+        phone_no:
+          type: string
+          description: "The mobile number to which the message will be sent, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        extra:
+          type: string
+          description: "An extra value that can be included in the message. This field is optional.\r\n"
+        template:
+          type: object
+          description: "An object containing the template information.\r\n"
+          properties:
+            name:
+              type: string
+              description: "The name or identifier of the text template you want to use.\r\n"
+            variables:
+              type: object
+              description: "An object containing the variables to be replaced in the template.\r\n"
+              properties:
+                '{var1}':
+                  type: string
+                  description: "The value to replace the \"{var1}\" variable in the template.\r\n"
+                '{var2}':
+                  type: string
+                  description: "The value to replace the \"{var2}\" variable in the template.\r\n"
+          required:
+            - name
+        fallback_text:
+          type: string
+          description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - template
+    rcs_template_fallback_api_msg:
+      type: object
+      title: India Template - Fallback API Message
+      description: >-
+        RCS template APIs allow businesses to leverage the advanced features of
+        RCS messaging and create compelling, interactive, and visually rich
+        content to engage with their customers more dynamically and
+        interactively.
+      properties:
+        type:
+          type: string
+          description: "The type of the template.\r\n\r\n- **Text:** RCS text templates provide a way to create engaging and interactive messaging experiences for businesses. \r\n- **Rich Card Standalone:** Rich Card Standalone utilizes the Rich Card format to provide visually rich and interactive content. \r\n- **Rich Card Carousel:** A Rich Card Carousel in RCS allows businesses to present multiple rich media cards in a single message, providing a visually engaging and interactive experience.\r\n"
+        phone_no:
+          type: string
+          description: "The mobile number to which the message will be sent, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        extra:
+          type: string
+          description: "An extra value that can be included in the message. This field is optional.\r\n"
+        template:
+          type: object
+          description: "An object containing the template information.\r\n"
+          properties:
+            name:
+              type: string
+              description: "The name or identifier of the text template you want to use.\r\n"
+            variables:
+              type: object
+              description: "An object containing the variables to be replaced in the template.\r\n"
+              properties:
+                '{var1}':
+                  type: string
+                  description: "The value to replace the \"{var1}\" variable in the template.\r\n"
+                '{var2}':
+                  type: string
+                  description: "The value to replace the \"{var2}\" variable in the template.\r\n"
+          required:
+            - name
+        fallback_text:
+          type: string
+          description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - template
+    rcs_template_whatsapp_fallback_api_msg:
+      type: object
+      title: India Template - Whatsapp Fallback API Message
+      description: >-
+        RCS template APIs allow businesses to leverage the advanced features of
+        RCS messaging and create compelling, interactive, and visually rich
+        content to engage with their customers more dynamically and
+        interactively.
+      properties:
+        type:
+          type: string
+          description: "The type of the template.\r\n\r\n- **Text:** RCS text templates provide a way to create engaging and interactive messaging experiences for businesses. \r\n- **Rich Card Standalone:** Rich Card Standalone utilizes the Rich Card format to provide visually rich and interactive content. \r\n- **Rich Card Carousel:** A Rich Card Carousel in RCS allows businesses to present multiple rich media cards in a single message, providing a visually engaging and interactive experience.\r\n"
+        phone_no:
+          type: string
+          description: "The mobile number to which the message will be sent, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        extra:
+          type: string
+          description: "An extra value that can be included in the message. This field is optional.\r\n"
+        template:
+          type: object
+          description: "An object containing the template information.\r\n"
+          properties:
+            name:
+              type: string
+              description: "The name or identifier of the text template you want to use.\r\n"
+            variables:
+              type: object
+              description: "An object containing the variables to be replaced in the template.\r\n"
+              properties:
+                '{var1}':
+                  type: string
+                  description: "The value to replace the \"{var1}\" variable in the template.\r\n"
+                '{var2}':
+                  type: string
+                  description: "The value to replace the \"{var2}\" variable in the template.\r\n"
+          required:
+            - name
+        fallback_text:
+          type: string
+          description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+        whatsapp:
+          type: object
+          description: "An object containing the whatsapp template fallback information.\r\n"
+          properties:
+            media:
+              type: object
+              description: "An object containing the whatsapp template fallback media information.\r\n"
+              properties:
+                        type:
+                          type: string
+                          description: "The type of the template.\r\n\r\n- **Text:** Example is Media Template\r\n"
+                        template_name:
+                          type: string
+                          description: "The name of the template for whatsapp fallback.\r\n"
+                        lang_code:
+                          type: string
+                          description: "The language code of the template to be sending fallback payload.\r\n"
+            
+      required:
+        - type
+        - phone_no
+        - bot_name
+        - template
+    rcs_template_sms_fallback_api_msg:
+      type: object
+      title: India Template - SMS Fallback API Message
+      description: >-
+        RCS template APIs allow businesses to leverage the advanced features of
+        RCS messaging and create compelling, interactive, and visually rich
+        content to engage with their customers more dynamically and
+        interactively.
+      properties:
+        type:
+          type: string
+          description: "The type of the template.\r\n\r\n- **Text:** RCS text templates provide a way to create engaging and interactive messaging experiences for businesses. \r\n- **Rich Card Standalone:** Rich Card Standalone utilizes the Rich Card format to provide visually rich and interactive content. \r\n- **Rich Card Carousel:** A Rich Card Carousel in RCS allows businesses to present multiple rich media cards in a single message, providing a visually engaging and interactive experience.\r\n"
+        phone_no:
+          type: string
+          description: "The mobile number to which the message will be sent, including the country code.\r\n"
+        bot_name:
+          type: string
+          description: "The name of the bot sending the message.\r\n"
+        extra:
+          type: string
+          description: "An extra value that can be included in the message. This field is optional.\r\n"
+        template:
+          type: object
+          description: "An object containing the template information.\r\n"
+          properties:
+            name:
+              type: string
+              description: "The name or identifier of the text template you want to use.\r\n"
+            variables:
+              type: object
+              description: "An object containing the variables to be replaced in the template.\r\n"
+              properties:
+                '{var1}':
+                  type: string
+                  description: "The value to replace the \"{var1}\" variable in the template.\r\n"
+                '{var2}':
+                  type: string
+                  description: "The value to replace the \"{var2}\" variable in the template.\r\n"
+          required:
+            - name
+        fallback_text:
+          type: string
+          description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format. It is optional.\r\n"
+        sms:
+          type: object
+          description: "An object containing the sms template fallback information.\r\n"
+          properties:
+            fallback_text:
+              type: string
+              description: "The fallback text that is displayed on devices. The fallback text to be sent if the RCS message cannot be delivered. This field supports variable substitution using {#var#} format.\r\n"
+            
       required:
         - type
         - phone_no
@@ -6232,3 +7070,455 @@ components:
         - bot_name
         - mobile_number
         - channel
+
+    rcs_create_template_text:
+      type: object
+      title: Create Template  - Text
+      description: >-
+        The API is used to create a template which uses text which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        textMessageContent:
+          type: string
+          description: "The  content of text message template.\r\n"
+        suggestions:
+          type: array
+          description: "Suggestions for text template.\r\n"
+          items:
+            type: string
+        templateDetails:
+          type: object
+          description: "The object defines the template details of text template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the account using text template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the text template.\r\n"
+            variables:
+              type: array
+              description: "The variables for text template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the text template which is text for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for text template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for text template.\r\n"
+          required:
+            - name
+            - type
+            - textMessageContent
+            - suggestions
+            - templateDetails
+
+    rcs_create_template_richcard:
+      type: object
+      title: Create Template  - Rich Card Standalone
+      description: >-
+        The API is used to create a template which uses rich card Standalone which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        orientation:
+          type: string
+          description: "The  orientation of the rich card template.\r\n"
+        height:
+          type: string
+          description: "The  height of the rich card template. Example : SHORT_HEIGHT \r\n"
+        standAlone:
+          type: object
+          description: "The object defines the template details of rich card template.\r\n"
+          properties:
+            cardTitle:
+              type: string
+              description: "The title of the rich card in  template.\r\n"
+            cardDescription:
+              type: string
+              description: "The description of the rich card in the template.\r\n"
+            fileName:
+              type: array
+              description: "The file Name for rich card images in template \r\n"
+              items:
+                type: string
+            thumbnailFileName:
+              type: string
+              description: "The thumbnail image file Name for rich card in template .\r\n"
+          suggestions:
+            type: array
+            description: "Suggestions for rich card template.\r\n"
+            items:
+              type: object
+            properties:
+              suggestionType:
+                type: string
+                description: "The Suggestion type of the rich card in the template.\r\n"
+              displayText:
+                type: array
+                description: "The display text Name for rich card images in template \r\n"
+                items:
+                  type: string
+              postback:
+                type: string
+                description: "The postback string value for rich card in template .\r\n"
+        templateDetails:
+          type: object
+          description: "The object defines the template details of rich card template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the account using rich card template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the ruch card template.\r\n"
+            variables:
+              type: array
+              description: "The variables for rich card template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the rich card template which is rich_card for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for rich card template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for rich card template.\r\n"
+          required:
+            - name
+            - type
+            - orientation
+            - height
+            - standAlone
+            - templateDetails
+
+    rcs_create_template_carousel:
+      type: object
+      title: Create Template  - Carousel
+      description: >-
+        The API is used to create a template which uses carouselList which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        height:
+          type: string
+          description: "The  height of the carousel template. Example : SHORT_HEIGHT \r\n"
+        width:
+          type: string
+          description: "The  width of the carousel template.Example: MEDIUM_WIDTH\r\n"
+        carouselList:
+          type: object
+          description: "The object defines the template details of carousel template.\r\n"
+          properties:
+            cardTitle:
+              type: string
+              description: "The title of the card in carouselList in  template.\r\n"
+            cardDescription:
+              type: string
+              description: "The description of the card in carouselList in the template.\r\n"
+            fileName:
+              type: array
+              description: "The file Name for card in carouselList images in template \r\n"
+              items:
+                type: string
+            thumbnailFileName:
+              type: string
+              description: "The thumbnail image file Name for rich card in template .\r\n"
+          suggestions:
+            type: array
+            description: "Suggestions for carousel template.\r\n"
+            items:
+              type: object
+            properties:
+              suggestionType:
+                type: string
+                description: "The Suggestion type of the card in carouselList in the template.\r\n"
+              url:
+                type: string
+                description: "The url for suggestion for card in carouselList in template .\r\n"
+              displayText:
+                type: array
+                description: "The display text Name for card in carouselList images in template \r\n"
+                items:
+                  type: string
+              postback:
+                type: string
+                description: "The postback string value for carouselList in template .\r\n"
+        templateDetails:
+          type: object
+          description: "The object defines the template details of carousel template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the bot using carousel template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the carousel template.\r\n"
+            variables:
+              type: array
+              description: "The variables for carousel template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the carousel template which is carousel for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for carousel template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for carousel template.\r\n"
+          required:
+            - name
+            - type
+            - height
+            - width
+            - carouselList
+            - templateDetails
+
+
+    rcs_update_template_text:
+      type: object
+      title: Update Template  - Text
+      description: >-
+        The API is used to update a template which uses text which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        textMessageContent:
+          type: string
+          description: "The  content of text message template.\r\n"
+        suggestions:
+          type: array
+          description: "Suggestions for text template.\r\n"
+          items:
+            type: string
+        templateDetails:
+          type: object
+          description: "The object defines the template details of text template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the account using text template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the text template.\r\n"
+            variables:
+              type: array
+              description: "The variables for text template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the text template which is text for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for text template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for text template.\r\n"
+          required:
+            - name
+            - type
+            - textMessageContent
+            - suggestions
+            - templateDetails
+
+    rcs_update_template_richcard:
+      type: object
+      title: Update Template  - Rich Card Standalone
+      description: >-
+        The API is used to update a template which uses rich card Standalone which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        orientation:
+          type: string
+          description: "The  orientation of the rich card template.\r\n"
+        height:
+          type: string
+          description: "The  height of the rich card template. Example : SHORT_HEIGHT \r\n"
+        standAlone:
+          type: object
+          description: "The object defines the template details of rich card template.\r\n"
+          properties:
+            cardTitle:
+              type: string
+              description: "The title of the rich card in  template.\r\n"
+            cardDescription:
+              type: string
+              description: "The description of the rich card in the template.\r\n"
+            fileName:
+              type: array
+              description: "The file Name for rich card images in template \r\n"
+              items:
+                type: string
+            thumbnailFileName:
+              type: string
+              description: "The thumbnail image file Name for rich card in template .\r\n"
+          suggestions:
+            type: array
+            description: "Suggestions for rich card template.\r\n"
+            items:
+              type: object
+            properties:
+              suggestionType:
+                type: string
+                description: "The Suggestion type of the rich card in the template.\r\n"
+              displayText:
+                type: array
+                description: "The display text Name for rich card images in template \r\n"
+                items:
+                  type: string
+              postback:
+                type: string
+                description: "The postback string value for rich card in template .\r\n"
+        templateDetails:
+          type: object
+          description: "The object defines the template details of rich card template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the account using rich card template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the ruch card template.\r\n"
+            variables:
+              type: array
+              description: "The variables for rich card template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the rich card template which is rich_card for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for rich card template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for rich card template.\r\n"
+          required:
+            - name
+            - type
+            - orientation
+            - height
+            - standAlone
+            - templateDetails
+
+    rcs_update_template_carousel:
+      type: object
+      title: Update Template  - Carousel
+      description: >-
+        The API is used to update a template which uses carouselList which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        height:
+          type: string
+          description: "The  height of the carousel template. Example : SHORT_HEIGHT \r\n"
+        width:
+          type: string
+          description: "The  width of the carousel template.Example: MEDIUM_WIDTH\r\n"
+        carouselList:
+          type: object
+          description: "The object defines the template details of carousel template.\r\n"
+          properties:
+            cardTitle:
+              type: string
+              description: "The title of the card in carouselList in  template.\r\n"
+            cardDescription:
+              type: string
+              description: "The description of the card in carouselList in the template.\r\n"
+            fileName:
+              type: array
+              description: "The file Name for card in carouselList images in template \r\n"
+              items:
+                type: string
+          suggestions:
+            type: array
+            description: "Suggestions for carousel template.\r\n"
+            items:
+              type: object
+            properties:
+              suggestionType:
+                type: string
+                description: "The Suggestion type of the card in carouselList in the template.\r\n"
+              url:
+                type: string
+                description: "The url for suggestion for card in carouselList in template .\r\n"
+              displayText:
+                type: array
+                description: "The display text Name for card in carouselList images in template \r\n"
+                items:
+                  type: string
+              postback:
+                type: string
+                description: "The postback string value for carouselList in template .\r\n"
+        templateDetails:
+          type: object
+          description: "The object defines the template details of carousel template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the bot using carousel template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the carousel template.\r\n"
+            variables:
+              type: array
+              description: "The variables for carousel template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the carousel template which is carousel for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for carousel template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for carousel template.\r\n"
+          required:
+            - name
+            - type
+            - height
+            - width
+            - carouselList
+            - templateDetails
