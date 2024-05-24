@@ -15,7 +15,7 @@ info:
     name: Route Mobile Development
 servers:
   - url: https://apis.rmlconnect.net
-  - url: '{client callback}'
+  
 paths:
   /auth/v1/login/:
     post:
@@ -96,7 +96,7 @@ paths:
                     status: <exception>
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs/v1/message:
     post:
       tags:
@@ -1013,7 +1013,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs/v1/bulk_message:
     post:
       tags:
@@ -1340,7 +1340,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+
 
   /payments/v1/send_bill:
     post:
@@ -1632,7 +1632,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+
   /rcs/v1/typing_event:
     post:
       tags:
@@ -1759,7 +1759,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs/file_server/v2/uploadfile:
     post:
       tags:
@@ -1885,7 +1885,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs/management/v1/add_tester:
     post:
       tags:
@@ -2013,7 +2013,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+     
   /rcs/management/v1/get_testers:
     get:
       tags:
@@ -2130,7 +2130,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs/optins/v1/create_optin:
     post:
       tags:
@@ -2256,7 +2256,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+       
   /rcs/v1/mark_read:
     post:
       tags:
@@ -2386,7 +2386,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs/v2/revoke_message:
     delete:
       tags:
@@ -2488,7 +2488,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /callback:
     post:
       tags:
@@ -2641,7 +2641,7 @@ paths:
           description: OK
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs-template-apis/api/v1/template/template:
     post:
       tags:
@@ -2760,7 +2760,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
       requestBody:
         description: ''
         content:
@@ -2955,7 +2955,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+       
       requestBody:
         description: ''
         content:
@@ -3148,7 +3148,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
     delete:
       tags:
         - RCS Template API
@@ -3265,7 +3265,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
   /rcs-template-apis/api/v1/template//template:
     get:
       tags:
@@ -3384,7 +3384,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
 
   /rcs-template-apis/api/v1//template//template:
     get:
@@ -3504,7 +3504,7 @@ paths:
         - jwt: []
       servers:
         - url: https://apis.rmlconnect.net
-        - url: '{client callback}'
+        
 tags:
   - name: Login
   - name: RCS Messages API
