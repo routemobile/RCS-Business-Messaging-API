@@ -3726,9 +3726,7 @@
                     "text_message": "Hi",
                     "timestamp": "2023-05-23T09:14:36.2599xxx",
                     "user_contact": "+91903695xxxx",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 },
                 "Incoming Image": {
@@ -3743,9 +3741,7 @@
                     "session_id": "b19d033c-a159-4565-8d3d-8d527abaxxxx",
                     "timestamp": "2023-04-02T10:49:30.9598xxxx",
                     "user_contact": "+91704534xxxx",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 },
                 "Incoming Location": {
@@ -3758,9 +3754,7 @@
                     "session_id": "72cfbb87-f7bf-4e02-bd40-322e4e35xxxxx",
                     "event_type": "location",
                     "latitude": "19.1453xxx",
-                    "longitude": "72.8236xxx",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "longitude": "72.8236xxx"
                   }
                 },
                 "Incoming Suggestion Action (URL/Dial)": {
@@ -3774,9 +3768,7 @@
                     "suggestion_type": "action",
                     "timestamp": "2023-04-02T12:02:33.594xxxx",
                     "user_contact": "+9170453xxxxx",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 },
                 "Incoming Suggestion Reply": {
@@ -3790,9 +3782,7 @@
                     "suggestion_type": "reply",
                     "timestamp": "2023-04-02T12:03:03.315xxxx",
                     "user_contact": "+9170453xxxxx",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 },
                 "Incoming Video": {
@@ -3807,9 +3797,7 @@
                     "session_id": "b19d033c-a159-4565-8d3d-8d527abxxxxx",
                     "timestamp": "2023-04-02T10:50:45.8520xxx",
                     "user_contact": "+91704534xxxx",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 },
                 "Incoming Document": {
@@ -3824,9 +3812,7 @@
                     "session_id": "b19d033c-a159-4565-8d3d-8d527abxxxxx1",
                     "timestamp": "2023-04-02T10:51:33.554xxxxx",
                     "user_contact": "+9170453xxxx5",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 },
                 "Status (Read/Delivered)": {
@@ -3868,9 +3854,7 @@
                     "user_contact": "+917045345285",
                     "whatsapp_message_id": "11b3ef00-d14e-11ed-a253-0a58a9feac02",
                     "extra": "extra",
-                    "username": "demo",
-                    "campaign_name": "{campaign_name}",
-                    "campaign_id": "{campaign_id}"
+                    "username": "demo"
                   }
                 }
               }
@@ -9518,14 +9502,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9536,9 +9512,7 @@
           "text_message",
           "timestamp",
           "user_contact",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_callback_incoming_image": {
@@ -9588,14 +9562,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9609,9 +9575,7 @@
           "session_id",
           "timestamp",
           "user_contact",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_callback_incoming_location": {
@@ -9653,14 +9617,6 @@
           "longitude": {
             "type": "number",
             "description": "A decimal number representing the longitude coordinate of the location shared by the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9672,9 +9628,7 @@
           "session_id",
           "event_type",
           "latitude",
-          "longitude",
-          "campaign_name",
-          "campaign_id"
+          "longitude"
         ]
       },
       "rcs_callback_incoming_suggaction": {
@@ -9720,14 +9674,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9740,9 +9686,7 @@
           "suggestion_type",
           "timestamp",
           "user_contact",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_callback_incoming_suggestion_reply": {
@@ -9788,14 +9732,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9808,9 +9744,7 @@
           "suggestion_type",
           "timestamp",
           "user_contact",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_callback_incoming_video": {
@@ -9860,14 +9794,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9881,9 +9807,7 @@
           "session_id",
           "timestamp",
           "user_contact",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_callback_incoming_document": {
@@ -9933,14 +9857,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -9954,9 +9870,7 @@
           "session_id",
           "timestamp",
           "user_contact",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_callback_status_read_delivered": {
@@ -10115,14 +10029,6 @@
           "username": {
             "type": "string",
             "description": "The name of the user.\r\n"
-          },
-          "campaign_name": {
-            "type": "string",
-            "description": "The name of the campaign. \r\n"
-          },
-          "campaign_id": {
-            "type": "string",
-            "description": "The id for the campaign sent. \r\n"
           }
         },
         "required": [
@@ -10134,9 +10040,7 @@
           "timestamp",
           "user_contact",
           "extra",
-          "username",
-          "campaign_name",
-          "campaign_id"
+          "username"
         ]
       },
       "rcs_upload_file_text_msg": {
