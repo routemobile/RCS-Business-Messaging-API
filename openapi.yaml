@@ -2524,8 +2524,6 @@ paths:
                   timestamp: 2023-05-23T09:14:36.2599xxx
                   user_contact: +91903695xxxx
                   username: demo
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Incoming Image:
                 value:
                   bot_name: Routemobile
@@ -2540,8 +2538,6 @@ paths:
                   timestamp: 2023-04-02T10:49:30.9598xxxx
                   user_contact: +91704534xxxx
                   username: demo
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Incoming Location:
                 value:
                   request_id: 01bc1fcd-6ceb-473d-bd17-b0979ea2xxxx
@@ -2553,8 +2549,6 @@ paths:
                   event_type: location
                   latitude: 19.1453xxx
                   longitude: 72.8236xxx
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Incoming Suggestion Action (URL/Dial):
                 value:
                   bot_name: Routemobile
@@ -2567,8 +2561,6 @@ paths:
                   timestamp: 2023-04-02T12:02:33.594xxxx
                   user_contact: +9170453xxxxx
                   username: demo
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Incoming Suggestion Reply:
                 value:
                   bot_name: Routemobile
@@ -2581,8 +2573,6 @@ paths:
                   timestamp: 2023-04-02T12:03:03.315xxxx
                   user_contact: +9170453xxxxx
                   username: demo
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Incoming Video:
                 value:
                   bot_name: Routemobile
@@ -2597,8 +2587,6 @@ paths:
                   timestamp: 2023-04-02T10:50:45.8520xxx
                   user_contact: +91704534xxxx
                   username: demo
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Incoming Document:
                 value:
                   bot_name: Routemobile
@@ -2613,8 +2601,6 @@ paths:
                   timestamp: 2023-04-02T10:51:33.554xxxxx
                   user_contact: +9170453xxxx5
                   username: demo
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
               Status (Read/Delivered):
                 value:
                   bot_name: Routemobile
@@ -2654,8 +2640,6 @@ paths:
                   whatsapp_message_id: 11b3ef00-d14e-11ed-a253-0a58a9feac02
                   extra: extra
                   username: demo  
-                  campaign_name: '{campaign_name}'
-                  campaign_id: '{campaign_id}'
       responses:
         '200':
           description: OK
@@ -7014,12 +6998,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7029,8 +7007,6 @@ components:
         - timestamp
         - user_contact
         - username
-        - campaign_name
-        - campaign_id
     rcs_callback_incoming_image:
       type: object
       title: Incoming Image
@@ -7068,12 +7044,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7086,8 +7056,6 @@ components:
         - timestamp
         - user_contact
         - username
-        - campaign_name
-        - campaign_id
     rcs_callback_incoming_location:
       type: object
       title: Incoming Location
@@ -7119,12 +7087,6 @@ components:
         longitude:
           type: number
           description: "A decimal number representing the longitude coordinate of the location shared by the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - request_id
         - user_contact
@@ -7135,8 +7097,6 @@ components:
         - event_type
         - latitude
         - longitude
-        - campaign_name
-        - campaign_id
     rcs_callback_incoming_suggaction:
       type: object
       title: Incoming Suggestion Action (URL/Dial)
@@ -7171,12 +7131,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7188,8 +7142,6 @@ components:
         - timestamp
         - user_contact
         - username
-        - campaign_name
-        - campaign_id
     rcs_callback_incoming_suggestion_reply:
       type: object
       title: Incoming Suggestion Reply
@@ -7224,12 +7176,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7241,8 +7187,6 @@ components:
         - timestamp
         - user_contact
         - username
-        - campaign_name
-        - campaign_id
     rcs_callback_incoming_video:
       type: object
       title: Incoming Video
@@ -7280,12 +7224,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7298,8 +7236,6 @@ components:
         - timestamp
         - user_contact
         - username
-        - campaign_name
-        - campaign_id
     rcs_callback_incoming_document:
       type: object
       title: Incoming Document
@@ -7337,12 +7273,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7355,8 +7285,6 @@ components:
         - timestamp
         - user_contact
         - username
-        - campaign_name
-        - campaign_id
     rcs_callback_status_read_delivered:
       type: object
       title: Status (Read/Delivered)
@@ -7479,12 +7407,6 @@ components:
         username:
           type: string
           description: "The name of the user.\r\n"
-        campaign_name:
-          type: string
-          description: "The name of the campaign. \r\n"
-        campaign_id:
-          type: string
-          description: "The id for the campaign sent. \r\n"
       required:
         - bot_name
         - event_type
@@ -7495,8 +7417,6 @@ components:
         - user_contact
         - extra
         - username
-        - campaign_name
-        - campaign_id
     rcs_upload_file_text_msg:
       type: object
       title: File Upload API
