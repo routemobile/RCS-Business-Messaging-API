@@ -7822,7 +7822,7 @@ components:
             - templateDetails
     rcs_update_template_text_with_pdf:
       type: object
-      title: Create Template  - Text with pdf
+      title: Update Template  - Text with pdf
       description: >-
         The API is used to create a template which uses text with pdf which can be used to be sent in 
         message to the recipient via RCS.
