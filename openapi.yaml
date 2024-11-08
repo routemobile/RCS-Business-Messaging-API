@@ -2772,6 +2772,7 @@ paths:
             schema:
               oneOf:
                 - $ref: '#/components/schemas/rcs_create_template_text'
+                - $ref: '#/components/schemas/rcs_create_template_text_with_pdf'
                 - $ref: '#/components/schemas/rcs_create_template_richcard'
                 - $ref: '#/components/schemas/rcs_create_template_carousel'
             examples:
@@ -2788,6 +2789,22 @@ paths:
                     category: text
                     system_ip: '{system ip}'
                     payload: {}
+              Text with pdf:
+                value:
+                  name: '{template name}'
+                  type: '{template type}'
+                  textMessageContent: '{template content for text message template}'
+                  suggestions: []
+                  templateDetails:
+                    username: '{username of account}'
+                    bot_name: '{RML Agent Name}'
+                    variables: []
+                    category: text_message_with_pdf
+                    payload: {}
+                    textMessageContent: '{template content for text message template}' 
+                    suggestions: []
+                    documentFileName: '{sample.pdf}'
+                    messageOrder: text_message_at_top
 
               Rich Card Standalone:
                 value:
@@ -2967,6 +2984,7 @@ paths:
             schema:
               oneOf:
                 - $ref: '#/components/schemas/rcs_update_template_text'
+                - $ref: '#/components/schemas/rcs_update_template_text_with_pdf'
                 - $ref: '#/components/schemas/rcs_update_template_richcard'
                 - $ref: '#/components/schemas/rcs_update_template_carousel'
             examples:
@@ -2983,6 +3001,22 @@ paths:
                     category: text
                     system_ip: '{system ip}'
                     payload: {}
+              Text with pdf:
+                value:
+                  name: '{template name}'
+                  type: '{template type}'
+                  textMessageContent: '{template content for text message template}'
+                  suggestions: []
+                  templateDetails:
+                    username: '{username of account}'
+                    bot_name: '{RML Agent Name}'
+                    variables: []
+                    category: text_message_with_pdf
+                    payload: {}
+                    textMessageContent: '{template content for text message template}' 
+                    suggestions: []
+                    documentFileName: '{sample.pdf}'
+                    messageOrder: text_message_at_top
 
               Rich Card Standalone:
                 value:
@@ -7515,6 +7549,60 @@ components:
             - textMessageContent
             - suggestions
             - templateDetails
+    rcs_create_template_text_with_pdf:
+      type: object
+      title: Create Template  - Text with pdf
+      description: >-
+        The API is used to create a template which uses text with pdf which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        textMessageContent:
+          type: string
+          description: "The  content of text message template.\r\n"
+        suggestions:
+          type: array
+          description: "Suggestions for text template.\r\n"
+          items:
+            type: string
+        templateDetails:
+          type: object
+          description: "The object defines the template details of text template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the account using text template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the text template.\r\n"
+            variables:
+              type: array
+              description: "The variables for text template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the text template which is text for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for text template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for text template.\r\n"
+          required:
+            - name
+            - type
+            - textMessageContent
+            - suggestions
+            - templateDetails
+            - document filename
+            - message order
+
 
     rcs_create_template_richcard:
       type: object
@@ -7732,6 +7820,61 @@ components:
             - textMessageContent
             - suggestions
             - templateDetails
+    rcs_update_template_text_with_pdf:
+      type: object
+      title: Create Template  - Text with pdf
+      description: >-
+        The API is used to create a template which uses text with pdf which can be used to be sent in 
+        message to the recipient via RCS.
+      properties:
+        name:
+          type: string
+          description: "The name of the template.\r\n"
+        type:
+          type: string
+          description: "The type of template to be created.\r\n"
+        textMessageContent:
+          type: string
+          description: "The  content of text message template.\r\n"
+        suggestions:
+          type: array
+          description: "Suggestions for text template.\r\n"
+          items:
+            type: string
+        templateDetails:
+          type: object
+          description: "The object defines the template details of text template.\r\n"
+          properties:
+            user_name:
+              type: string
+              description: "The username of the account using text template.\r\n"
+            bot_name:
+              type: string
+              description: "The bot name for the text template.\r\n"
+            variables:
+              type: array
+              description: "The variables for text template \r\n"
+              items:
+                type: string
+            category:
+              type: string
+              description: "Category for the text template which is text for this case.\r\n"
+            system_ip:
+              type: string
+              description: "The system ip for bot for text template.\r\n"
+            payload:
+              type: object
+              description: "Object containing payload for text template.\r\n"
+          required:
+            - name
+            - type
+            - textMessageContent
+            - suggestions
+            - templateDetails
+            - document filename
+            - message order
+
+    
 
     rcs_update_template_richcard:
       type: object
